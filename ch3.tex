@@ -1,0 +1,76 @@
+\section{Some Familiar Topological Spaces and Basic Topological Concepts}
+
+\subsection{Exercises 1.2}
+
+
+\question{Let $A = (0,1) \cup (1,3)$. For the given $x \in A$, give a value of $r > 0$ such that $(x-r, x+r) \subseteq A$.}
+
+\begin{parts}
+ 
+ \part{$x = \frac{3}{4}$}
+ \part{$x = 2$}
+ \part{$x = \frac{9}{8}$}
+ 
+\begin{solution}
+ $\frac{1}{16}$
+\end{solution}
+
+\end{parts}
+
+\question{Prove that A = $(0,1) \cup (1,3)$ is an open subset of $\mathbb{R}$.}
+
+\begin{solution}
+\\Case 1: $x \in (0,1)$ \\
+Let $d = \text{min}\{1-x,x\}$. $(x-\frac{d}{2},x+\frac{d}{2}) \subseteq A$ is an open set. \\
+Case 2: $x \in (1,3)$ \\
+Let $d = \text{min}\{3-x,x-1\}$. The proof proceeds similarly as Case 1. \\
+As $\forall x \in A \exists$ an open interval $\subseteq A$ which contains $x$, $A$ is an open set by definition.
+\end{solution}
+
+\question{Prove than an ordinary open interval is an open subset of $\mathbb{R}$ but that an open set need \textit{not} be an open interval.}
+
+\begin{solution}
+ \\All open intervals are open subsets: \\
+ Replace 0 with $x-r$ and 1 with $x+r$ as in Case 1 from the question above. \\
+ Open sets need not be an open interval: \\
+ The empty set is an open set, but no open interval is empty, as it contains $x$ (open intervals are in the form $(x-r,x+r)$).
+\end{solution}
+
+\question{State precisely what it means when a subset $A$ of $\mathbb{R}$ is \textit{not} open.}
+
+\begin{solution}
+ $\exists x \in A$ such that $(x-r,x+r)-A \neq \emptyset \forall r > 0$
+\end{solution}
+
+\question{Prove that the following subsets of $\mathbb{R}$ are not open.}
+
+\begin{parts}
+ 
+ \part{The set of rational numbers}
+ 
+ 
+\begin{solution}
+ \\An open interval is nonempty. As it is an open set, it cannot contain a single point only (next question) so it must contain at least 2 points. WLOG, let the 2 points be $p < q$. Using limits, $\exists n \in \mathbb{N}$ such that $r = p + \frac{\sqrt{2}}{n} < q$. Since all open intervals contain an irrational $r$, no open intervals can be a subset of the rationals, hence it is not open.
+\end{solution}
+
+ \part{A set consisting of a single point}
+ 
+ 
+\begin{solution}
+ \\$\forall$ open intervals $(x-r,x+r)$, it contains the distinct points $x$ and $x+\frac{r}{2}$. Therefore, $\{x\}$ cannot be open.
+\end{solution}
+
+ \part{An interval of the form $[a,b)$, where $a < b$}
+ 
+ 
+\begin{solution}
+\\ $\forall$ open intervals $(a-r,a+r)$, $b=a-\frac{r}{2}$ is a point in that interval which is outside of $[a,b)$.
+\end{solution}
+
+ \part{The set $A = \{x\in\mathbb{R}:x\neq\frac{1}{n},\text{ for }n\in\mathbb{Z}^+\}$}
+ 
+ 
+\begin{solution}
+\\ $\frac{1}{n}$ tends to 0. Therefore $\forall r > 0 \exists n \in \mathbb{N}$ such that $r > \frac{1}{n}$. Therefore all open intervals $(0-r,0+r)$ contains a point outside of $A$.
+\end{solution}
+\end{parts}
