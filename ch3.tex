@@ -375,3 +375,36 @@ so $A$ is an open set under this metric. Similarly, if $B$ is an open set under 
  \\Intuitively, real numbers satisfy (1) through (4). A rigorous proof involves Dedekind cuts, which is (probably) out of the scope of this book. \\
  $\subseteq$ in $\mathcal{P}(X)$ is one such example. (1) and (3) are trivial, and (2) is true by definition. However, $\{1,2\}$ and $\{3,4\}$ are elements of $\mathcal{P}(\mathbb{N})$ where both elements cannot be compared.
 \end{solution}
+
+\subsection{Exercise 4.5}
+
+\question{Every open subset of $\mathbb{R}$ has cardinality $c$}
+
+\begin{solution}
+\\Let $A$ be an open subset. $\forall x \in A$,
+$$x \in (x-r,x+r) \subseteq A$$
+The function
+$$f(y) = \frac{y-x}{r} \times \frac{\pi}{2}$$
+is a bijection from $(x-r,x+r)$ to $\mathbb{R}$, so they share the same cardinality $c$. As
+$$(x-r,x+r) \subseteq A \subseteq \mathbb{R}$$
+$|A| = c$ by the Cantor-Bernstein Theorem.
+\end{solution}
+
+\question{For any positive integer $n$, there are open subsets of $[0,\Omega)$ with cardinality $n$. In particular, there are points $x$ in $[0,\Omega)$ such that the singleton set $\{x\}$ is an open set. But $[0,\Omega)$ is not discrete - not every singleton set is open.}
+
+\begin{solution}
+ \\$[1,n]$ is a set with cardinality $n$. To show that it is open, $\forall x \in [1,n]$,
+ $$0 < x < n+1 \text{ such that } x \in (0,n+1) \subseteq A$$
+ Putting $n=1$ gives us a singleton set that is open. However, not all singleton sets are open, e.g. $\{0\}$. For it to be open, there has to be an ordinal smaller than 0, which does not exist.
+\end{solution}
+
+\question{There are open subsets of $[0,\Omega)$ of cardinality $\aleph_0$ and there are open subsets of $[0,\Omega)$ of cardinality $\aleph_1$.}
+
+\begin{solution}
+ \\$\forall n \in \mathbb{N}$, $[n+1,\omega)$ is a subset of cardinality $\aleph_0$. To show that it is open, $\forall x \in [n+1,\omega)$,
+ $$n < x < \omega \text{ such that } x \in (n,\omega) \subseteq [n+1,\omega)$$
+ Similarly, $[n+1,\Omega)$ is a subset of cardinality $\aleph_1$. The bijective function from $[0,\Omega)$ to $[n+1,\Omega)$ is given by
+ $$f(x) = \begin{cases} x + n + 1 & x \in \mathbb{N} \\ x & \text{else} \end{cases}$$
+ To show that it is open, $\forall x \in [n+1,\Omega)$,
+ $$n < x < \Omega \text{ such that } x \in (n,\Omega) \subseteq [n+1,\Omega)$$
+\end{solution}
