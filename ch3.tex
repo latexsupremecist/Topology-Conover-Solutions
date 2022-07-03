@@ -157,3 +157,50 @@ The same proof is used for the base case and the induction step.
  Their complements are each other, which are open.
 \end{solution}
 \end{parts}
+
+\subsection{Exercise 1.7}
+
+\question{State precisely what it means when a subset of $\mathbb{R}$ is not closed. (Do this in term of points; saying that a set is not closed if its complement is not open is true, but is not what we want here.}
+
+\begin{solution}
+ \\Let that subset be $A$. It is not closed when there is a point outside of it whose every open interval intersects with $A$.
+ 
+ $$\exists x \in \mathbb{R} - A \text{ such that } (x-r,x+r) \cap A \neq \emptyset \forall r > 0$$
+\end{solution}
+
+\question{Which of the following subsets of $\mathbb{R}$ are closed? Which are open?}
+
+\begin{parts}
+ 
+ \part{The set $\mathbb{Z}$ of integers.}
+ \part{The set of rational numbers.}
+ \part{A set consisting of a single point.}
+ \part{An interval of the form $[a,b)$, where $a < b$.}
+ \part{The set $A = \{x\in\mathbb{R}: x \neq \frac{1}{n} \text{ for } n \in \mathbb{Z}^+\}$.}
+ \part{The set $A = \{x\in\mathbb{R}: x \neq \frac{1}{n} \text{ for } n \in \mathbb{Z}^+ \text{ and } x \neq 0\}$.}
+ 
+ 
+\begin{solution}
+ \\Closed: a, c \\
+ Open: f
+\end{solution}
+
+\end{parts}
+
+\question{Prove that an ordinary closed interval is a closed subset of $\mathbb{R}$, but a closed set need not be a closed interval.}
+
+\begin{solution}
+ \\Let the closed interval be $[a,b]$, where $a < b$. We want to prove that its complement is open. Let $x < a$ be in its complement. Then
+ $$(x-r,x+r) \text{ where } r = \frac{a-x}{2}$$
+ is an open interval in its complement. A similar open interval can be deduced for $x > b$. Therefore, the complement is open, and the closed interval is closed. \\
+ For the second part of the question, note that $\mathbb{R}$ is closed, but is not a closed interval. (Or else, let $\mathbb{R} = [a,b]$, and $\mathbb{R}-[a,b] \neq \emptyset$ forms a contradiction.)
+\end{solution}
+
+\question{Give an example of an infinite collection of closed subsets of whose union is not closed, thus showing tht the finiteness condition in theorem 1.6(b) is not necessary.}
+
+\begin{solution}
+ \\Let the collection be
+ $$A = \{[-r,r]|0<r<1\}$$
+ It is obvious that $\bigcup A = (-1,1)$. The complement of $(-1,1)$ contains 1, whose every open interval intersects with $(-1,1)$. Hence the complement is not open, so $\bigcup A$ is not closed.
+\end{solution}
+
