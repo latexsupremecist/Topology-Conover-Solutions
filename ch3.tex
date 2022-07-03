@@ -113,3 +113,47 @@ The same proof is used for the base case and the induction step.
 \end{solution}
 
 \end{parts}
+
+\subsection{Exercise 1.4}
+
+\question{Give an example of an infinite collection of open subsets of the real line whose intersection is not open, thus showing that the finiteness condition in Theorem 1.3(b) is necessary.}
+
+\begin{solution}
+ $$\bigcap A \text{ where } A = \{(-r,r)|r>0\}$$
+ Obviously $0 \in (-r,r) \forall r > 0$. However, the intersection does not contain any nonzero element, because $\forall x \neq 0$,
+ $$x \notin \{-\frac{|x|}{2},\frac{|x|}{2}\}$$
+ The open intervals that form the intersection are open sets, but the intersection contains only 1 element, so it is not open.
+\end{solution}
+
+\subsection{Theorem 1.6}
+
+\question
+
+\begin{parts}
+ 
+ \part{The intersection of any collection of closed sets is closed.}
+ 
+ 
+\begin{solution}
+ \\Let $C_i$ be a closed set, and the corresponding open set be defined as $O_i = \mathbb{R} - C_i$.
+ 
+ $$\bigcap_{i \in I} C_i = \bigcap_{i \in I} \mathbb{R} - O_i = R - \bigcup_{i \in I} O_i$$
+ 
+ $\bigcup_{i\in I}O_i$ is a union of open sets, so it is open. Hence its complement (intersection of closed sets) is closed.
+\end{solution}
+
+\part{The union of any finite collection of closed sets is closed.}
+
+\begin{solution}
+ 
+ $$\bigcup_{n \in \mathbb{N}} C_n =  \bigcup_{n \in \mathbb{N}} \mathbb{R} - O_n = R - \bigcap_{n \in \mathbb{N}} O_n$$
+ 
+ And the proof follows similar to the case above.
+\end{solution}
+
+\part{$\emptyset$ and $\mathbb{R}$ itself are both closed}
+
+\begin{solution}
+ Their complements are each other, which are open.
+\end{solution}
+\end{parts}
