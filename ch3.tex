@@ -74,3 +74,42 @@ As $\forall x \in A \exists$ an open interval $\subseteq A$ which contains $x$, 
 \\ $\frac{1}{n}$ tends to 0. Therefore $\forall r > 0 \exists n \in \mathbb{N}$ such that $r > \frac{1}{n}$. Therefore all open intervals $(0-r,0+r)$ contains a point outside of $A$.
 \end{solution}
 \end{parts}
+
+\subsection{Theorem 1.3}
+
+\question
+
+\begin{parts}
+ 
+ \part{The union of any collection of open subsets of the real line is also an open subset of the line}
+ 
+ 
+\begin{solution}
+ \\ Let $\bigcup A$ denote the union of subsets $A$. Then
+$$x \in \bigcup A \Rightarrow x \in A \Rightarrow x \in (x-r,x+r) \subseteq A \subseteq \bigcup A$$
+for some $r > 0$. \\
+As all points in $\bigcup A$ are in open intervals which are subsets of $\bigcup A$, the union is open by definition.
+\end{solution}
+
+\part{The intersection of any finite collection of open subsets of the real line is also an open subset of the line.}
+
+\begin{solution}
+ \\This can be proven with induction. \\
+Let $A$ and $B$ be open sets. $x \in A \cap B \Rightarrow x \in A$. Since $A$ is open, $\exists r_A > 0$ such that
+$$x \in (x-r_A,x+r_A) \subseteq A$$
+The same holds for $B$. Letting $r = \text{min}\{r_A,r_B\}$,
+$$x \in (x-r,x+r) \subseteq A \cap B \forall x \in A \cap B$$
+The same proof is used for the base case and the induction step.
+\end{solution}
+
+\part{Both the empty set and $\mathbb{R}$ itself are open subsets of the real line.}
+
+\begin{solution}
+ \\Empty set: \\
+ $$a \Rightarrow b$$
+ is defined to be true when $a$ is false. The definition of an open set $A$ involves the assumption $x \in A$, which is false, so it is vacuously true for the empty set. \\
+ $\mathbb{R}$: \\
+ $\forall x \in \mathbb{R}, (x-1,x+1) \in \mathbb{R}$
+\end{solution}
+
+\end{parts}
