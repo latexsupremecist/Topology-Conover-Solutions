@@ -353,6 +353,17 @@ so $A$ is an open set under this metric. Similarly, if $B$ is an open set under 
  which is the union of open sets, so $A$ is also open.
 \end{solution}
 
+\subsection{Theorem 4.1}
 
+\question{A subset $A$ or $\mathbb{R}$ is open in the metric topology induced by the absolute value metric if and only if for each point $x \in A$, there exist real numbers $a$ and $b$ with $a < x < b$, such that $x \in (a,b) \subseteq A$.}
 
+\begin{solution}
+ \\$\Leftarrow$: \\
+ Let $r =$ min$\{x-a,b-x\}$. Then $\forall x \in A$,
+ $$x \in (x-r,x+r) \subseteq (a,b) \subseteq A$$
+ $\Rightarrow$: \\
+ As $A$ is open,
+ $$x \in A \Rightarrow x \in S_r(x)$$
+ so $a = x - r$ and $b = x + r$ suffices.
+\end{solution}
 
