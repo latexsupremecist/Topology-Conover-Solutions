@@ -204,3 +204,115 @@ The same proof is used for the base case and the induction step.
  It is obvious that $\bigcup A = (-1,1)$. The complement of $(-1,1)$ contains 1, whose every open interval intersects with $(-1,1)$. Hence the complement is not open, so $\bigcup A$ is not closed.
 \end{solution}
 
+\subsection{Exercise 2.3}
+
+\question{Show that the absolute value formula, $d(x,y) = |x-y|$ is indeed a metric on the real line. Describe the \textbf{1-ball} centered at 0 in the topology induced by this metric.}
+
+\begin{solution}
+Trivial.
+\begin{enumerate}
+ \item $|x-y| \geq 0 \forall \{x,y\} \subset \mathbb{R}$ \\
+ \item $|x-y| = 0$ iff $x=y$ \\
+ \item $|x-z|+|y-z|=|x-z|+|z-y| \geq |x-z+z-y| = |x-y|$ \\
+ \end{enumerate}
+ 
+ The 1-ball is ordinary closed interval $(-1,1)$.
+\end{solution}
+
+\question{Show that the distance formula is a metric on the Euclidean plane. Describe the 1-ball centered at $(0,0)$ in the topology induced by this metric.}
+
+\begin{solution}
+ \\In fact, this can be proven for all finite Euclidean spaces $\mathbb{R}^n$, where
+ $$d(x,y) = \sqrt{\sum_{i=1}^n (x_i-y_i)^2}$$
+ $d(x,y) \geq 0 \forall \{x,y\} \subset \mathbb{R}^n, d(x,y) = 0 \text{ iff } x = y, d(x,y) = d(y,x) \forall \{x,y\} \subset \mathbb{R}^n$ are all trivial. What remains is the triangle inequality.
+ Let $a_i = x_i - z_i$ and $b_i = z_i - y_i$. Therefore $a_i + b_i = x_i - y_i$.
+ 
+ 
+\begin{align*}
+ d(x,z) + d(y,z) &= \sqrt{\sum_i a_i^2} + \sqrt{\sum_i b_i^2} \\
+ (d(x,z) + d(y,z))^2 &= \sum_i(a_i^2 + b_i^2) + 2\sqrt{\left(\sum_i a_i^2\right)\left(\sum_i b_i^2\right)} \\
+ (d(x,z)+d(y,z))^2 - (d(x,y))^2 &= 2\left(\sqrt{\left(\sum_i a_i^2\right)\left(\sum_i b_i^2\right)} - \sum_i a_i b_i\right) \\
+\end{align*}
+This is greater than 0 (from the Cauchy-Schwarz Inequality). Rearranging and taking the square root of both sides (we can do this because the distance formula is always positive) yields the desired inequality. \\
+The 1-ball is the open disk with a radius of 1.
+\end{solution}
+
+\question{Define the obvious metric for Euclidean 3-space, $E^3 = \mathbb{R} \times \mathbb{R} \times \mathbb{R} = \{(x,y,z):x,y,z \in \mathbb{R}\}$. Describe the 1-ball centered at the point $(0,0,0)$ in the topology induced by this metric. (In this topology, an $r$ ball really is a ball - hence the name "$r$-ball.")}
+
+\begin{solution}
+ The metric is defined in the question above, and the 1-ball is an open sphere with a radius of 1.
+\end{solution}
+
+\question{Show that for any metric space $(X,d)$,}
+
+\begin{parts}
+ 
+ \part{The union of any collection of open sets is open.}
+ 
+ 
+\begin{solution}
+ \\Let $O_i$ be open. Then
+ $$x \in \bigcup_i O_i \Rightarrow x \in O_i \Rightarrow x \in S_r(x) \subseteq O_i$$
+ Since $O_i \subseteq \bigcup O_i$, we have
+ $$x \in \bigcup_i O_i \Rightarrow x \in S_r(x) \subseteq \bigcup_i O_i$$
+\end{solution}
+
+\part{The intersection of any finite collection of open sets is open.}
+
+\begin{solution}
+ \\Similar to the metric case, this can be proven using induction. \\
+Let $A$ and $B$ be open sets.
+$$x \in A \cap B \Rightarrow x \in A \Rightarrow x \in S_{r_A}(x) \subseteq A$$
+Similarly,
+$$x \in S_{r_B}(x) \subseteq B$$
+Letting $r = \text{min}\{r_A,r_B\}$, we have
+$$x \in A \cap B \Rightarrow x \in S_r(x) \subseteq A \cap B$$
+\end{solution}
+
+\part{The empty set and $X$ itself are open.}
+
+\begin{solution}
+ \\The fact that the empty set is open is vacuously true, and the definition of $S_r(x)$ implies $S_r(x) \subseteq X$, so $X$ is also open.
+\end{solution}
+\end{parts}
+
+\question{A set can have more than one metric defined on it, and different metrics may give rise to different topologies.}
+
+\begin{parts}
+ 
+ \part{Let $X = \mathbb{R}$ and define a metric on $X$ by $d(x,y) = 1$ if $x \neq y$, $d(x,y) = 0$ if $x = y$. Prove that $d$ is a metric on $X$. What is $S_\frac{1}{2}(0)$ in this metric? Is $(X,d)$ the same space as $\mathbb{R}$ with its usual metric topology? In other words, does this metric give rise to the same topology on $\mathbb{R}$ as the usual metric does?}
+ 
+ 
+\begin{solution}
+ \\The fact that $d$ is a metric is trivial. $S_\frac{1}{2}(0) = \{0\}$. This metric gives rise to a different topology, as $\{0\}$ is open in this topology, but not the usual topology.
+\end{solution}
+
+\part{Let $X$ be the Euclidean place and define a metric on $X$ by $d((x_1,x_2),(y_1,y_2)) = |x_1-y_1| + |x_2 - y_2|$. Prove that $d$ is a metric on the plane, and describe the $r$-balls in this metric. Does this metric give rise to the same topology as the usual metric on this plane?}
+
+\begin{solution}
+ \\ $d(x,y) \geq 0 \forall \{x,y\} \subset \mathbb{R}^n, d(x,y) = 0 \text{ iff } x = y, d(x,y) = d(y,x) \forall \{x,y\} \subset \mathbb{R}^n$ are all trivial. What remains is the triangle inequality.
+
+\begin{align*}
+ d(x,z) + d(y,z) &= |x_1 - z_1| + |x_2 - z_2| + |y_1 - z_1| + |y_2 - z_2| \\
+ &= |x_1 - z_1| + |z_1 - y_1| + |x_2 - z_2| + |z_2 - y_2| \\
+ &> |x_1 - y_1| + |x_2 - y_2| \\
+ &= d(x,y) \\
+\end{align*}
+The r-balls of $x$ are open squares centered at $x$ with sides of length $r$. It is obvious that all open disks $D$ centered at $x$ contain open squares $S$ also centered at $x$, (such that $x \in S \subset D$) and vice versa. If $A$ is an open set under the usual topology, then
+$$x \in A \Rightarrow x \in D$$
+Combining this with
+$$x \in S \subset D$$
+we have
+$$x \in A \Rightarrow x \in S$$
+so $A$ is an open set under this metric. Similarly, if $B$ is an open set under this metric, $B$ is also an open set under the usual metric. Therefore, both topologies are the same.
+\end{solution}
+\end{parts}
+
+
+
+
+
+
+
+
+
