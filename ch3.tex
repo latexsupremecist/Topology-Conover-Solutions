@@ -308,10 +308,50 @@ so $A$ is an open set under this metric. Similarly, if $B$ is an open set under 
 \end{solution}
 \end{parts}
 
+\subsection{Exercise 3.3}
 
+\question{Let $(\mathbb{Q},d)$ be the space of rational numbers with the metric topology induced by the absolute value metric $d$.}
 
+\begin{parts}
+ 
+ \part{Show that the set $\{y \in \mathbb{Q}:1 < y < 2\}$ is open in $(\mathbb{Q},d)$.}
+ 
+ 
+\begin{solution}
+ \\Denote the set as $A$. Let $r =$ min$\{\frac{2-y}{2},\frac{y-1}{2}\}$. Then
+ $$y \in (y-r,y+r) \cap A \subseteq A \forall y \in A$$
+\end{solution}
 
+\part{Show that the set $[\sqrt{2},\sqrt{3}]\cap \mathbb{Q}$ is open in $(\mathbb{Q},d)$.}
 
+\begin{solution}
+ Noting that both $\sqrt{2}$ and $\sqrt{3}$ are not in the set, the proof can be obtained by replacing the rationals 1 and 2 in the solution above.
+\end{solution}
+\end{parts}
+
+\question{Let $S$ = [1,2] be given teh topology induced by the absolute value metric. Show that $[1,\frac{3}{2}),(\frac{3}{2},2]$ and $[1,2]$ are all open in $(S,d)$.}
+
+\begin{solution}
+ \\For the first set, if $x \neq 1$, let $r =$ min$\{\frac{3}{2}-x,x-1\}$. Then $S_r(x) \cap [1,\frac{3}{2}) = S_r(x)$, and so
+ $$x \in [1,\frac{3}{2}) \Rightarrow x \in S_r(x) \subset [1,\frac{3}{2})$$
+ If $x = 1$, then $r = \frac{5}{4}$ suffices. \\
+ A similar approach is used for the second and third set, noting the special cases for $x=1$ and $x=2$.
+\end{solution}
+
+\question{Let $(\mathbb{Z},d)$ be the space of integers with the metric topology induced by the absolute value metric. Show that \textit{every} subset of $\mathbb{Z}$ is open in $(\mathbb{Z},d)$. In particular, any set consisting of a single point is open in $(\mathbb{Z},d)$.}
+
+\begin{solution}
+ \\Let $A$ be a subset, and let $r = \frac{1}{2}$. Then $\forall x \in A$,
+ $$x \in S_r(x) \cap A = \{x\} \subseteq A$$
+\end{solution}
+
+\question{Let $(X,d)$ be a discrete space. Show that every subset of $X$ is open in $(X,d)$.}
+
+\begin{solution}
+ \\Let $A$ be a subset. Then
+ $$A = \bigcup\{\{x\}|x \in A\}$$
+ which is the union of open sets, so $A$ is also open.
+\end{solution}
 
 
 
