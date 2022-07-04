@@ -471,7 +471,7 @@ $|A| = c$ by the Cantor-Bernstein Theorem.
 It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Since $|x_n|$ converges by the previous question, so does $x_n$.
 \end{solution}
 
-\question{Let $\{x_n:n\in\mathbb{Z}^+\}$ be the sequence in $\R$ defined by $x_n = (-1)^n$. Does this sequence converge? To what? Prove it.}
+\question{Let $\{x_n:n\in\mathbb{Z}^+\}$ be the sequence in $\R$ defined by $x_n = (-1)^n$. Does this sequence converge? To what? Prove it.} \label{alternatingsign}
 
 \begin{solution}
  \\It does not converge to $a \forall a \in \R$. \\
@@ -493,7 +493,7 @@ It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Sinc
  Let $N = \text{ max} \{N_a,N_b\}$. Then $x_{N+1} \in S_r(a)$ and $x_{N+1} \in S_r(b)$ which is a contradiction.
 \end{solution}
 
-\subsection{Theorem 5.5} \label{thm5.5}
+\subsection{Theorem 5.5} \label{thm3.5.5}
 
 \question{A subset $S$ of a metric space $X$ is closed if and only if whenever a sequence of point of $S$ converges to a point $x \in X$, then $x \in S$.}
 
@@ -568,6 +568,42 @@ The least upper bound of a set $S$ is denoted by sup $S$. Prove that if $S \subs
 \question{Prove that if $S \subseteq \R$ and sup $S$ exists, then if $S$ is closed, sup $S \in S$. Is the converse true?}
 
 \begin{solution}
-\\ There is a sequence in $S$ that tends to sup $S$. Since $S$ is closed, this implies sup $S \in S$ by \hyperref[thm5.5]{Theorem 5.5}. \\
+\\ There is a sequence in $S$ that tends to sup $S$. Since $S$ is closed, this implies sup $S \in S$ by \hyperref[thm3.5.5]{Theorem 5.5}. \\
 The converse is not true, because $(0,1]$ is not closed.
+\end{solution}
+
+\subsection{Exercise 5.8}
+
+\question{If a sequence converges to a point $x$, then $x$ is an accumulation point of the sequence. (So "ultimately" implies "frequently.")}
+
+\begin{solution}
+ \\This follows from the definition. Since the sequence converges to $x$, $\forall r > 0$,
+ $$\exists N' \in \N \text{ such that } n \in \N > N' \Rightarrow x_n \in S_r(x)$$
+Letting $n =$ max$\{N'+1,N\}$, we have $x_n \in S_r(x)$ for arbitrary $r$ and $N$.
+\end{solution}
+
+\question{If $x$ is an accumulation point of a sequence, the sequence need not converge to $x$. (So "frequently" does not imply "ultimately".)}
+
+\begin{solution}
+ \\Let $x_n = (-1)^n$. Then 1 is an accumulation point, because for arbitrary $r$ and $N$, we know $2N \geq N$ so that
+ $$x_{2N} = 1 \in S_r(1) \forall r > 0$$
+ However, the sequence does not converge to 1. \hyperref[alternatingsign]{see this problem}
+\end{solution}
+
+\question{A subset $F$ of a metric space $X$ is closed if and only if whenever $x \in X$ is an accumulation point of a sequence of points of $F$, then $x \in F$.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Let $r_0 = 1$ and $r_{i+1} = \frac{r_i}{2}$. Define $x_0$ to be the first point in the sequence in $F$ to be in $S_{r_0}(x)$. Define $x_{i+1}$ to be the first point after $x_i$ in the sequence to be in $S_{r_{i+1}}(x)$. Then $x_n$ tends to $x$, as 
+ $$\forall r > 0 \exists r_i < r \text{ such that } \forall n > i, x_n \in S_{r_i}(x) \subseteq S_r(x)$$
+ Since $F$ is closed and $x_n$ is a sequence in $F$, we can conclude that $x \in F$ by \hyperref[thm3.5.5]{Theorem 5.5}. \\
+ 
+ $\Leftarrow$: \\
+ For all sequences in $F$ that converge to $x$, $x$ is an accumulation point, so $x \in F$. This implies $F$ is closed by \hyperref[thm3.5.5]{Theorem 5.5}.
+\end{solution}
+
+\question{State precisely what it means when the point $x \in X$ is \textit{not} an accumulation point of the sequence $\{x_n:n\in\mathbb{Z}^+\} \subseteq X$.}
+
+\begin{solution}
+ $\exists r \in \R > 0, N \in \N$ such that $n \geq N \Rightarrow x_n \notin S_r(x)$
 \end{solution}
