@@ -493,7 +493,7 @@ It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Sinc
  Let $N = \text{ max} \{N_a,N_b\}$. Then $x_{N+1} \in S_r(a)$ and $x_{N+1} \in S_r(b)$ which is a contradiction.
 \end{solution}
 
-\subsection{Theorem 5.5}
+\subsection{Theorem 5.5} \label{thm5.5}
 
 \question{A subset $S$ of a metric space $X$ is closed if and only if whenever a sequence of point of $S$ converges to a point $x \in X$, then $x \in S$.}
 
@@ -502,4 +502,72 @@ It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Sinc
  Assume the opposite. Then $x \in X-S$ but $S_r(x)$ intersects with $S$ $\forall r > 0$. Then $X-S$ is not open (it has no open subset containing $x$), so $S$ is not closed, which is a contradiction. \\
  $\Leftarrow$: \\
  Assume the opposite. Then $X-S$ is not open, so $\exists x \in X-S$ such that $S_r(x)$ intersects with $S$ $\forall r > 0$. Let $y_n \in S_{\frac{1}{n}}(x) \cap S$. Then $y$ is a sequence in $S$ that tends to a point $x$ outside of $S$. This is a contradiction.
+\end{solution}
+
+\subsection{Exercise 5.6}
+
+\question{Use Theorem 5.5 to decide if the following subsets of the real line are closed (in the metric topology induced by the absolute value metric).}
+
+\begin{parts}
+ 
+ \part{$[0,1]$}
+ \part{$[1,\infty)$}
+ \part{$\{x\in\R:x=\frac{1}{n} \text{ for }n \in \mathbb{Z}^+\}$}
+  \part{$\{x\in\R:x=\frac{1}{n} \text{ for }n \in \mathbb{Z}^+\text{, or }x=0\}$}
+  \part{$\{x\in\R:x=\frac{1}{\sqrt{n}} \text{ for } n \in \mathbb{Z}^+\}$}
+  
+\end{parts}
+
+\begin{solution}
+ Closed, closed, not closed, closed, not closed.
+\end{solution}
+
+\question{Is$(\R-\Q)\cap\{x\in\R:x=\frac{1}{\sqrt{n}} \text{ for } n \in \mathbb{Z}^+\}$ a closed subset of the \textit{irrationals} with the metric topology induced by the absolute value metric?}
+
+\begin{solution}
+ \\Yes. Whenever the sequence tends to an irrational point $x$, $x$ is in the set. Proof by contradiction: \\
+ If $x < 0$, let $r = -x$. The sequence never enters $S_r(x)$, so it cannot converge to $x$. \\
+ $If x > 1$, let $r = x-1$. The sequence never enters $S_r(x)$, so it cannot converge to $x$. \\
+If $0<x<1$, then $\frac{1}{\sqrt{n+1}} < x < \frac{1}{\sqrt{n}}$. Let $r = \text{ min} \{x-\frac{1}{\sqrt{n+1}}, \frac{1}{\sqrt{n}}-x\}$. The sequence never enters $S_r(x)$, so it cannot converge to $x$. \\
+In all other cases, $x$ is either rational or in the subset itself.
+\end{solution}
+
+\question{Let $[p_n = (x_n,y_n):n \in \mathbb{Z}^+\}$ be a sequence in $E^2$, the Euclidean plane. Prove that $p_n \rightarrow p = (x,y)$ if and only if both $x_n \rightarrow x$ and $y_n \rightarrow y$. (Thus a sequence in the plane converges if and only if it converges "coordinate-wise")}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Obviously, $d(p_n,p) \geq d(x_n,x)$, similarly for $y$. Hence $p_n \in S_r(p) \Rightarrow x_n \in S_r(x)$ and similarly for $y$. Since $p_n$ converges to $p$, $x_n$ converges to $x$ and so does $y$. \\
+ $\Leftarrow$: \\
+ $\forall r > 0$, let $r' = \frac{r}{\sqrt{2}}$. Then $\exists N_x \in \N$ such that $n \in \N > N_x \Rightarrow x_n \in S_{r'}(x)$. A similar $N_y$ exists for $y$. Letting $N = \text{ max}\{N_x,N_y\}$ implies that $\forall n > N$, $p_n \in S_r(p)$. As this holds $\forall r > 0$, we can conclude that $p_n \rightarrow p$.
+\end{solution}
+
+\question{Prove that every real number can be written as the limit of a convergent sequence of \textit{rational} numbers, i.e., if $r \in \R$, exhibit a sequence $\{x_n:n\in\mathbb{Z}^+\} \subseteq \Q$ such that $x_n \rightarrow r$.}
+
+\begin{solution}
+ This can be done by extending the decimal expansion of said real number, e.g.
+ $$\pi = 3,3.1,3.14,3.141,\dots$$
+ The maximum error decreases by one-tenth every term, so this sequence converges to the real number.
+\end{solution}
+
+\question{A real number $r$ is called the \textbf{least upper bound} or \textbf{supremum} of a set $S \subseteq \R$ if
+
+\begin{parts}
+ 
+ \part{$r \geq s$ for all $s \in S$, and}
+ \part{If $t \in \R$ is a real number such that $t \geq s$ for all $s \in S$, then $t \geq r$.}
+ 
+\end{parts}
+
+The least upper bound of a set $S$ is denoted by sup $S$. Prove that if $S \subseteq \R$ and sup $S$ exists, then there exists a sequence of points of $S$ that converges to sup $S$.}
+
+\begin{solution}
+ \\Denote a sequence with $r_0 = 1, r_{i+1} = \frac{r_i}{2}$. Let $s$ denote the upper bound. Since $s - r_i$ is not the upper bound, $\exists s_i \in S$ where $s - r_i < s_i \leq s$. Then $s_i \in S_{r_i}(s)$. We now show that $s_i$ tends to $s$. \\
+ Since $r_i$ obviously tends to 0, $\exists r_i < r \forall r > 0$, then $s_i \in S_{r_i}(s) \subseteq S_r(s)$. Therefore there is a sequence in $S$ that converges to its supremum. This is probably the intended solution of the question above.
+\end{solution}
+
+\question{Prove that if $S \subseteq \R$ and sup $S$ exists, then if $S$ is closed, sup $S \in S$. Is the converse true?}
+
+\begin{solution}
+\\ There is a sequence in $S$ that tends to sup $S$. Since $S$ is closed, this implies sup $S \in S$ by \hyperref[thm5.5]{Theorem 5.5}. \\
+The converse is not true, because $(0,1]$ is not closed.
 \end{solution}
