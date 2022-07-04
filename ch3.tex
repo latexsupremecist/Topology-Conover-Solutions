@@ -493,3 +493,13 @@ It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Sinc
  Let $N = \text{ max} \{N_a,N_b\}$. Then $x_{N+1} \in S_r(a)$ and $x_{N+1} \in S_r(b)$ which is a contradiction.
 \end{solution}
 
+\subsection{Theorem 5.5}
+
+\question{A subset $S$ of a metric space $X$ is closed if and only if whenever a sequence of point of $S$ converges to a point $x \in X$, then $x \in S$.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Assume the opposite. Then $x \in X-S$ but $S_r(x)$ intersects with $S$ $\forall r > 0$. Then $X-S$ is not open (it has no open subset containing $x$), so $S$ is not closed, which is a contradiction. \\
+ $\Leftarrow$: \\
+ Assume the opposite. Then $X-S$ is not open, so $\exists x \in X-S$ such that $S_r(x)$ intersects with $S$ $\forall r > 0$. Let $y_n \in S_{\frac{1}{n}}(x) \cap S$. Then $y$ is a sequence in $S$ that tends to a point $x$ outside of $S$. This is a contradiction.
+\end{solution}
