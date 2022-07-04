@@ -480,3 +480,16 @@ It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Sinc
  If $a = 1$ or $a = -1$, let $r = 1$, then $x_n$ never enters $S_r(a)$. \\
  Else, let $r = \text{ min} \{1-a,a+1\}$, then $x_n$ never enters $S_r(a)$.
 \end{solution}
+
+\subsection{Theorem 5.4}
+
+\question{A sequence in a metric space can converge to at most one point.}
+
+\begin{solution}
+ \\Proof by contradiction. Let it converge to two distinct points $a$ and $b$. Let $r = \frac{d(a,b)}{2}$, so $S_r(a)$ and $S_r(b)$ are disjoint by the triangle inequality.\\
+ Since the sequence converges to both points, $\exists \{N_a,N_b\} \subseteq \N$ such that
+ $$n \in \N > N_a \Rightarrow x_n \in S_r(a)$$
+ and similarly for $b$. \\
+ Let $N = \text{ max} \{N_a,N_b\}$. Then $x_{N+1} \in S_r(a)$ and $x_{N+1} \in S_r(b)$ which is a contradiction.
+\end{solution}
+
