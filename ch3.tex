@@ -413,6 +413,19 @@ $|A| = c$ by the Cantor-Bernstein Theorem.
  $$n < x < \Omega \text{ such that } x \in (n,\Omega) \subseteq [n+1,\Omega)$$
 \end{solution}
 
+\question{Supplementary: No countable collection of subsets of $[0,\Omega]$ intersect at $\{\Omega\}$ only.}
+
+\begin{solution}
+ \\Let $A_n$ be an open set in the collection. Since $\Omega \in A$,
+ $$\Omega \in (a_n,\Omega] \subseteq A$$
+ Where $(a_n,\Omega] = [a_n+1,\Omega]$. Let $b_n = a_n+1$, and consider
+ $$b = \bigcup_{n \in \mathbb{N}} b_n$$
+ The union of ordinals (b) is an ordinal that is greater than all of the ordinals in the union $(b > b_n)$. \\
+ Since we have subsets of $A_n$,
+ $$\bigcap_{n \in \mathbb{N}} [b_n,\Omega] \subseteq \bigcap_{n \in \mathbb{N}} A_n$$
+ Since $b > b_n \forall n \in \mathbb{N}$, $b$ is an element of the set in the left, meaning the countable ordinal $b$ is an element of the intersection, which is a contradiction.
+\end{solution}
+
 \subsection{Exercise 4.6}
 
 \question{Show that $\omega = [0,\omega)$ with the order topology is a discrete space, so is the same as $\mathbb{Z}^+\cap\{0\}$ when given the metric topology induced by the absolute value metric on $\mathbb{R}$.}
