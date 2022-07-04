@@ -17,7 +17,7 @@
 
 \end{parts}
 
-\question{Prove that A = $(0,1) \cup (1,3)$ is an open subset of $\mathbb{R}$.}
+\question{Prove that A = $(0,1) \cup (1,3)$ is an open subset of $\R$.}
 
 \begin{solution}
 \\Case 1: $x \in (0,1)$ \\
@@ -27,7 +27,7 @@ Let $d = \text{min}\{3-x,x-1\}$. The proof proceeds similarly as Case 1. \\
 As $\forall x \in A \exists$ an open interval $\subseteq A$ which contains $x$, $A$ is an open set by definition.
 \end{solution}
 
-\question{Prove than an ordinary open interval is an open subset of $\mathbb{R}$ but that an open set need \textit{not} be an open interval.}
+\question{Prove than an ordinary open interval is an open subset of $\R$ but that an open set need \textit{not} be an open interval.}
 
 \begin{solution}
  \\All open intervals are open subsets: \\
@@ -36,13 +36,13 @@ As $\forall x \in A \exists$ an open interval $\subseteq A$ which contains $x$, 
  The empty set is an open set, but no open interval is empty, as it contains $x$ (open intervals are in the form $(x-r,x+r)$).
 \end{solution}
 
-\question{State precisely what it means when a subset $A$ of $\mathbb{R}$ is \textit{not} open.}
+\question{State precisely what it means when a subset $A$ of $\R$ is \textit{not} open.}
 
 \begin{solution}
  $\exists x \in A$ such that $(x-r,x+r)-A \neq \emptyset \forall r > 0$
 \end{solution}
 
-\question{Prove that the following subsets of $\mathbb{R}$ are not open.}
+\question{Prove that the following subsets of $\R$ are not open.}
 
 \begin{parts}
  
@@ -50,7 +50,7 @@ As $\forall x \in A \exists$ an open interval $\subseteq A$ which contains $x$, 
  
  
 \begin{solution}
- \\An open interval is nonempty. As it is an open set, it cannot contain a single point only (next question) so it must contain at least 2 points. WLOG, let the 2 points be $p < q$. Using limits, $\exists n \in \mathbb{N}$ such that $r = p + \frac{\sqrt{2}}{n} < q$. Since all open intervals contain an irrational $r$, no open intervals can be a subset of the rationals, hence it is not open.
+ \\An open interval is nonempty. As it is an open set, it cannot contain a single point only (next question) so it must contain at least 2 points. WLOG, let the 2 points be $p < q$. Using limits, $\exists n \in \N$ such that $r = p + \frac{\sqrt{2}}{n} < q$. Since all open intervals contain an irrational $r$, no open intervals can be a subset of the rationals, hence it is not open.
 \end{solution}
 
  \part{A set consisting of a single point}
@@ -67,11 +67,11 @@ As $\forall x \in A \exists$ an open interval $\subseteq A$ which contains $x$, 
 \\ $\forall$ open intervals $(a-r,a+r)$, $b=a-\frac{r}{2}$ is a point in that interval which is outside of $[a,b)$.
 \end{solution}
 
- \part{The set $A = \{x\in\mathbb{R}:x\neq\frac{1}{n},\text{ for }n\in\mathbb{Z}^+\}$}
+ \part{The set $A = \{x\in\R:x\neq\frac{1}{n},\text{ for }n\in\mathbb{Z}^+\}$}
  
  
 \begin{solution}
-\\ $\frac{1}{n}$ tends to 0. Therefore $\forall r > 0 \exists n \in \mathbb{N}$ such that $r > \frac{1}{n}$. Therefore all open intervals $(0-r,0+r)$ contains a point outside of $A$.
+\\ $\frac{1}{n}$ tends to 0. Therefore $\forall r > 0 \exists n \in \N$ such that $r > \frac{1}{n}$. Therefore all open intervals $(0-r,0+r)$ contains a point outside of $A$.
 \end{solution}
 \end{parts}
 
@@ -102,14 +102,14 @@ $$x \in (x-r,x+r) \subseteq A \cap B \forall x \in A \cap B$$
 The same proof is used for the base case and the induction step.
 \end{solution}
 
-\part{Both the empty set and $\mathbb{R}$ itself are open subsets of the real line.}
+\part{Both the empty set and $\R$ itself are open subsets of the real line.}
 
 \begin{solution}
  \\Empty set: \\
  $$a \Rightarrow b$$
  is defined to be true when $a$ is false. The definition of an open set $A$ involves the assumption $x \in A$, which is false, so it is vacuously true for the empty set. \\
- $\mathbb{R}$: \\
- $\forall x \in \mathbb{R}, (x-1,x+1) \in \mathbb{R}$
+ $\R$: \\
+ $\forall x \in \R, (x-1,x+1) \in \R$
 \end{solution}
 
 \end{parts}
@@ -135,9 +135,9 @@ The same proof is used for the base case and the induction step.
  
  
 \begin{solution}
- \\Let $C_i$ be a closed set, and the corresponding open set be defined as $O_i = \mathbb{R} - C_i$.
+ \\Let $C_i$ be a closed set, and the corresponding open set be defined as $O_i = \R - C_i$.
  
- $$\bigcap_{i \in I} C_i = \bigcap_{i \in I} \mathbb{R} - O_i = R - \bigcup_{i \in I} O_i$$
+ $$\bigcap_{i \in I} C_i = \bigcap_{i \in I} \R - O_i = R - \bigcup_{i \in I} O_i$$
  
  $\bigcup_{i\in I}O_i$ is a union of open sets, so it is open. Hence its complement (intersection of closed sets) is closed.
 \end{solution}
@@ -146,12 +146,12 @@ The same proof is used for the base case and the induction step.
 
 \begin{solution}
  
- $$\bigcup_{n \in \mathbb{N}} C_n =  \bigcup_{n \in \mathbb{N}} \mathbb{R} - O_n = R - \bigcap_{n \in \mathbb{N}} O_n$$
+ $$\bigcup_{n \in \N} C_n =  \bigcup_{n \in \N} \R - O_n = R - \bigcap_{n \in \N} O_n$$
  
  And the proof follows similar to the case above.
 \end{solution}
 
-\part{$\emptyset$ and $\mathbb{R}$ itself are both closed}
+\part{$\emptyset$ and $\R$ itself are both closed}
 
 \begin{solution}
  Their complements are each other, which are open.
@@ -160,15 +160,15 @@ The same proof is used for the base case and the induction step.
 
 \subsection{Exercise 1.7}
 
-\question{State precisely what it means when a subset of $\mathbb{R}$ is not closed. (Do this in term of points; saying that a set is not closed if its complement is not open is true, but is not what we want here.}
+\question{State precisely what it means when a subset of $\R$ is not closed. (Do this in term of points; saying that a set is not closed if its complement is not open is true, but is not what we want here.}
 
 \begin{solution}
  \\Let that subset be $A$. It is not closed when there is a point outside of it whose every open interval intersects with $A$.
  
- $$\exists x \in \mathbb{R} - A \text{ such that } (x-r,x+r) \cap A \neq \emptyset \forall r > 0$$
+ $$\exists x \in \R - A \text{ such that } (x-r,x+r) \cap A \neq \emptyset \forall r > 0$$
 \end{solution}
 
-\question{Which of the following subsets of $\mathbb{R}$ are closed? Which are open?}
+\question{Which of the following subsets of $\R$ are closed? Which are open?}
 
 \begin{parts}
  
@@ -176,8 +176,8 @@ The same proof is used for the base case and the induction step.
  \part{The set of rational numbers.}
  \part{A set consisting of a single point.}
  \part{An interval of the form $[a,b)$, where $a < b$.}
- \part{The set $A = \{x\in\mathbb{R}: x \neq \frac{1}{n} \text{ for } n \in \mathbb{Z}^+\}$.}
- \part{The set $A = \{x\in\mathbb{R}: x \neq \frac{1}{n} \text{ for } n \in \mathbb{Z}^+ \text{ and } x \neq 0\}$.}
+ \part{The set $A = \{x\in\R: x \neq \frac{1}{n} \text{ for } n \in \mathbb{Z}^+\}$.}
+ \part{The set $A = \{x\in\R: x \neq \frac{1}{n} \text{ for } n \in \mathbb{Z}^+ \text{ and } x \neq 0\}$.}
  
  
 \begin{solution}
@@ -187,13 +187,13 @@ The same proof is used for the base case and the induction step.
 
 \end{parts}
 
-\question{Prove that an ordinary closed interval is a closed subset of $\mathbb{R}$, but a closed set need not be a closed interval.}
+\question{Prove that an ordinary closed interval is a closed subset of $\R$, but a closed set need not be a closed interval.}
 
 \begin{solution}
  \\Let the closed interval be $[a,b]$, where $a < b$. We want to prove that its complement is open. Let $x < a$ be in its complement. Then
  $$(x-r,x+r) \text{ where } r = \frac{a-x}{2}$$
  is an open interval in its complement. A similar open interval can be deduced for $x > b$. Therefore, the complement is open, and the closed interval is closed. \\
- For the second part of the question, note that $\mathbb{R}$ is closed, but is not a closed interval. (Or else, let $\mathbb{R} = [a,b]$, and $\mathbb{R}-[a,b] \neq \emptyset$ forms a contradiction.)
+ For the second part of the question, note that $\R$ is closed, but is not a closed interval. (Or else, let $\R = [a,b]$, and $\R-[a,b] \neq \emptyset$ forms a contradiction.)
 \end{solution}
 
 \question{Give an example of an infinite collection of closed subsets of whose union is not closed, thus showing tht the finiteness condition in theorem 1.6(b) is not necessary.}
@@ -211,7 +211,7 @@ The same proof is used for the base case and the induction step.
 \begin{solution}
 Trivial.
 \begin{enumerate}
- \item $|x-y| \geq 0 \forall \{x,y\} \subset \mathbb{R}$ \\
+ \item $|x-y| \geq 0 \forall \{x,y\} \subset \R$ \\
  \item $|x-y| = 0$ iff $x=y$ \\
  \item $|x-z|+|y-z|=|x-z|+|z-y| \geq |x-z+z-y| = |x-y|$ \\
  \end{enumerate}
@@ -222,9 +222,9 @@ Trivial.
 \question{Show that the distance formula is a metric on the Euclidean plane. Describe the 1-ball centered at $(0,0)$ in the topology induced by this metric.}
 
 \begin{solution}
- \\In fact, this can be proven for all finite Euclidean spaces $\mathbb{R}^n$, where
+ \\In fact, this can be proven for all finite Euclidean spaces $\R^n$, where
  $$d(x,y) = \sqrt{\sum_{i=1}^n (x_i-y_i)^2}$$
- $d(x,y) \geq 0 \forall \{x,y\} \subset \mathbb{R}^n, d(x,y) = 0 \text{ iff } x = y, d(x,y) = d(y,x) \forall \{x,y\} \subset \mathbb{R}^n$ are all trivial. What remains is the triangle inequality.
+ $d(x,y) \geq 0 \forall \{x,y\} \subset \R^n, d(x,y) = 0 \text{ iff } x = y, d(x,y) = d(y,x) \forall \{x,y\} \subset \R^n$ are all trivial. What remains is the triangle inequality.
  Let $a_i = x_i - z_i$ and $b_i = z_i - y_i$. Therefore $a_i + b_i = x_i - y_i$.
  
  
@@ -237,7 +237,7 @@ This is greater than 0 (from the Cauchy-Schwarz Inequality). Rearranging and tak
 The 1-ball is the open disk with a radius of 1.
 \end{solution}
 
-\question{Define the obvious metric for Euclidean 3-space, $E^3 = \mathbb{R} \times \mathbb{R} \times \mathbb{R} = \{(x,y,z):x,y,z \in \mathbb{R}\}$. Describe the 1-ball centered at the point $(0,0,0)$ in the topology induced by this metric. (In this topology, an $r$ ball really is a ball - hence the name "$r$-ball.")}
+\question{Define the obvious metric for Euclidean 3-space, $E^3 = \R \times \R \times \R = \{(x,y,z):x,y,z \in \R\}$. Describe the 1-ball centered at the point $(0,0,0)$ in the topology induced by this metric. (In this topology, an $r$ ball really is a ball - hence the name "$r$-ball.")}
 
 \begin{solution}
  The metric is defined in the question above, and the 1-ball is an open sphere with a radius of 1.
@@ -280,7 +280,7 @@ $$x \in A \cap B \Rightarrow x \in S_r(x) \subseteq A \cap B$$
 
 \begin{parts}
  
- \part{Let $X = \mathbb{R}$ and define a metric on $X$ by $d(x,y) = 1$ if $x \neq y$, $d(x,y) = 0$ if $x = y$. Prove that $d$ is a metric on $X$. What is $S_\frac{1}{2}(0)$ in this metric? Is $(X,d)$ the same space as $\mathbb{R}$ with its usual metric topology? In other words, does this metric give rise to the same topology on $\mathbb{R}$ as the usual metric does?}
+ \part{Let $X = \R$ and define a metric on $X$ by $d(x,y) = 1$ if $x \neq y$, $d(x,y) = 0$ if $x = y$. Prove that $d$ is a metric on $X$. What is $S_\frac{1}{2}(0)$ in this metric? Is $(X,d)$ the same space as $\R$ with its usual metric topology? In other words, does this metric give rise to the same topology on $\R$ as the usual metric does?}
  
  
 \begin{solution}
@@ -290,7 +290,7 @@ $$x \in A \cap B \Rightarrow x \in S_r(x) \subseteq A \cap B$$
 \part{Let $X$ be the Euclidean place and define a metric on $X$ by $d((x_1,x_2),(y_1,y_2)) = |x_1-y_1| + |x_2 - y_2|$. Prove that $d$ is a metric on the plane, and describe the $r$-balls in this metric. Does this metric give rise to the same topology as the usual metric on this plane?}
 
 \begin{solution}
- \\ $d(x,y) \geq 0 \forall \{x,y\} \subset \mathbb{R}^n, d(x,y) = 0 \text{ iff } x = y, d(x,y) = d(y,x) \forall \{x,y\} \subset \mathbb{R}^n$ are all trivial. What remains is the triangle inequality.
+ \\ $d(x,y) \geq 0 \forall \{x,y\} \subset \R^n, d(x,y) = 0 \text{ iff } x = y, d(x,y) = d(y,x) \forall \{x,y\} \subset \R^n$ are all trivial. What remains is the triangle inequality.
 
 \begin{align*}
  d(x,z) + d(y,z) &= |x_1 - z_1| + |x_2 - z_2| + |y_1 - z_1| + |y_2 - z_2| \\
@@ -355,7 +355,7 @@ so $A$ is an open set under this metric. Similarly, if $B$ is an open set under 
 
 \subsection{Theorem 4.1}
 
-\question{A subset $A$ or $\mathbb{R}$ is open in the metric topology induced by the absolute value metric if and only if for each point $x \in A$, there exist real numbers $a$ and $b$ with $a < x < b$, such that $x \in (a,b) \subseteq A$.}
+\question{A subset $A$ or $\R$ is open in the metric topology induced by the absolute value metric if and only if for each point $x \in A$, there exist real numbers $a$ and $b$ with $a < x < b$, such that $x \in (a,b) \subseteq A$.}
 
 \begin{solution}
  \\$\Leftarrow$: \\
@@ -373,20 +373,20 @@ so $A$ is an open set under this metric. Similarly, if $B$ is an open set under 
 
 \begin{solution}
  \\Intuitively, real numbers satisfy (1) through (4). A rigorous proof involves Dedekind cuts, which is (probably) out of the scope of this book. \\
- $\subseteq$ in $\mathcal{P}(X)$ is one such example. (1) and (3) are trivial, and (2) is true by definition. However, $\{1,2\}$ and $\{3,4\}$ are elements of $\mathcal{P}(\mathbb{N})$ where both elements cannot be compared.
+ $\subseteq$ in $\mathcal{P}(X)$ is one such example. (1) and (3) are trivial, and (2) is true by definition. However, $\{1,2\}$ and $\{3,4\}$ are elements of $\mathcal{P}(\N)$ where both elements cannot be compared.
 \end{solution}
 
 \subsection{Exercise 4.5}
 
-\question{Every open subset of $\mathbb{R}$ has cardinality $c$}
+\question{Every open subset of $\R$ has cardinality $c$}
 
 \begin{solution}
 \\Let $A$ be an open subset. $\forall x \in A$,
 $$x \in (x-r,x+r) \subseteq A$$
 The function
 $$f(y) = \frac{y-x}{r} \times \frac{\pi}{2}$$
-is a bijection from $(x-r,x+r)$ to $\mathbb{R}$, so they share the same cardinality $c$. As
-$$(x-r,x+r) \subseteq A \subseteq \mathbb{R}$$
+is a bijection from $(x-r,x+r)$ to $\R$, so they share the same cardinality $c$. As
+$$(x-r,x+r) \subseteq A \subseteq \R$$
 $|A| = c$ by the Cantor-Bernstein Theorem.
 \end{solution}
 
@@ -405,10 +405,10 @@ $|A| = c$ by the Cantor-Bernstein Theorem.
 \question{There are open subsets of $[0,\Omega)$ of cardinality $\aleph_0$ and there are open subsets of $[0,\Omega)$ of cardinality $\aleph_1$.}
 
 \begin{solution}
- \\$\forall n \in \mathbb{N}$, $[n+1,\omega)$ is a subset of cardinality $\aleph_0$. To show that it is open, $\forall x \in [n+1,\omega)$,
+ \\$\forall n \in \N$, $[n+1,\omega)$ is a subset of cardinality $\aleph_0$. To show that it is open, $\forall x \in [n+1,\omega)$,
  $$n < x < \omega \text{ such that } x \in (n,\omega) \subseteq [n+1,\omega)$$
  Similarly, $[n+1,\Omega)$ is a subset of cardinality $\aleph_1$. The bijective function from $[0,\Omega)$ to $[n+1,\Omega)$ is given by
- $$f(x) = \begin{cases} x + n + 1 & x \in \mathbb{N} \\ x & \text{else} \end{cases}$$
+ $$f(x) = \begin{cases} x + n + 1 & x \in \N \\ x & \text{else} \end{cases}$$
  To show that it is open, $\forall x \in [n+1,\Omega)$,
  $$n < x < \Omega \text{ such that } x \in (n,\Omega) \subseteq [n+1,\Omega)$$
 \end{solution}
@@ -419,16 +419,16 @@ $|A| = c$ by the Cantor-Bernstein Theorem.
  \\Let $A_n$ be an open set in the collection. Since $\Omega \in A$,
  $$\Omega \in (a_n,\Omega] \subseteq A$$
  Where $(a_n,\Omega] = [a_n+1,\Omega]$. Let $b_n = a_n+1$, and consider
- $$b = \bigcup_{n \in \mathbb{N}} b_n$$
+ $$b = \bigcup_{n \in \N} b_n$$
  The union of ordinals (b) is an ordinal that is greater than all of the ordinals in the union $(b > b_n)$. \\
  Since we have subsets of $A_n$,
- $$\bigcap_{n \in \mathbb{N}} [b_n,\Omega] \subseteq \bigcap_{n \in \mathbb{N}} A_n$$
- Since $b > b_n \forall n \in \mathbb{N}$, $b$ is an element of the set in the left, meaning the countable ordinal $b$ is an element of the intersection, which is a contradiction.
+ $$\bigcap_{n \in \N} [b_n,\Omega] \subseteq \bigcap_{n \in \N} A_n$$
+ Since $b > b_n \forall n \in \N$, $b$ is an element of the set in the left, meaning the countable ordinal $b$ is an element of the intersection, which is a contradiction.
 \end{solution}
 
 \subsection{Exercise 4.6}
 
-\question{Show that $\omega = [0,\omega)$ with the order topology is a discrete space, so is the same as $\mathbb{Z}^+\cap\{0\}$ when given the metric topology induced by the absolute value metric on $\mathbb{R}$.}
+\question{Show that $\omega = [0,\omega)$ with the order topology is a discrete space, so is the same as $\mathbb{Z}^+\cap\{0\}$ when given the metric topology induced by the absolute value metric on $\R$.}
 
 \begin{solution}
  \\First we prove that all singleton sets $\{x\}$ are open.
@@ -450,3 +450,33 @@ $|A| = c$ by the Cantor-Bernstein Theorem.
  So all open sets are unions of open intervals $O_x$. Since open intervals are open sets (this can easily be observed), any union of open intervals are open sets.
 \end{solution}
 
+\subsection{Exercise 5.3}
+
+\question{State precisely what it means when a sequence in $(X,d)$ does not converge to the point $x \in X$.}
+
+\begin{solution}
+ $\forall N \in \N > 0, r > 0, \exists r > 0, n > N$ such that $x_n \notin S_r(x)$
+\end{solution}
+
+\question{Let $\{x_n:n\in\mathbb{Z}^+\}$ be the sequence in $\R$ defined by $x_n = \frac{1}{n}$. Does this sequence converge? To what? Prove it.}
+
+\begin{solution}
+ \\It converges to 0. We take for granted that natural numbers are unbounded above, i.e. $\forall r \in \R \exists n \in \N$ such that $n > r$. Then $\forall r > 0$,
+ $\exists N \in \N > \frac{1}{r}$, so $r > x_n \forall n \in \N > N$, which is equivalent to $x_n \in S_r(0) \forall n \in \N > N$.
+\end{solution}
+
+\question{Let $\{x_n:n\in\mathbb{Z}^+\}$ be the sequence in $\R$ defined by $x_n = (-1)^n(\frac{1}{n})$. Does this sequence converge? To what? Prove it.}
+
+\begin{solution}
+It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Since $|x_n|$ converges by the previous question, so does $x_n$.
+\end{solution}
+
+\question{Let $\{x_n:n\in\mathbb{Z}^+\}$ be the sequence in $\R$ defined by $x_n = (-1)^n$. Does this sequence converge? To what? Prove it.}
+
+\begin{solution}
+ \\It does not converge to $a \forall a \in \R$. \\
+ If $a > 1$, let $r = a - 1$, then $x_n$ never enters $S_r(a)$. \\
+ If $a < -1$, let $r = -1-a$, then $x_n$ never enters $S_r(a)$. \\
+ If $a = 1$ or $a = -1$, let $r = 1$, then $x_n$ never enters $S_r(a)$. \\
+ Else, let $r = \text{ min} \{1-a,a+1\}$, then $x_n$ never enters $S_r(a)$.
+\end{solution}
