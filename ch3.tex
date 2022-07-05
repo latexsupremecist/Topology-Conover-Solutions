@@ -642,3 +642,16 @@ Therefore, if we let $\delta =$ min$\{\frac{c^2}{2}\epsilon,\frac{c}{2}\}$, then
 $$|x-c| < \delta \Rightarrow |x-c| < \frac{c^2}{2} \epsilon \Rightarrow |x-c| < cx\epsilon \Rightarrow \frac{|x-c|}{cx} < \epsilon \Rightarrow \left|\frac{1}{x} - \frac{1}{c}\right| < \epsilon$$
 which completes the proof.
 \end{solution}
+
+\subsection{Theorem 6.4}
+
+\question{Let $(X,d_1)$ and $(Y,d_2)$ be two metric spaces and let $f:D \subseteq X \rightarrow Y$. The $f$ is \textbf{continuous at} point $x_0 \in D$ if and only if whenever $\{x_n:n\in\mathbb{Z}^+\}$ is a sequence in $D$ that converges to $x_0$, then the sequence $\{f(x_n):n\in\mathbb{Z}^+\}$ converges to $f(x_0)$ in $Y$.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+Since $f$ is continuous, $\forall \epsilon > 0$, $\exists \delta > 0$ such that $f(S_\delta(x_0)) \subseteq S_\epsilon(f(x_0))$. Since $x_n$ converges to $x_0$, $\exists N \in \N$ such that $n \in \N > N \Rightarrow x_n \in S_\delta(x_0)$. This also means that $f(x_n) \in S_\epsilon(f(x_0))$. Therefore
+$$\forall \epsilon > 0 \exists N \in \N\text{ such that } n \in \N > N \Rightarrow f(x_n) \in S_\epsilon(f(x_0))$$
+so that $f(x_n)$ tends to $f(x_0)$. \\
+$\Leftarrow$: \\
+Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuous. That means $\exists \epsilon > 0$ where $\forall \delta > 0, A(\delta_i) = f(S_{\delta_i}(x_0)) - S_\epsilon(x) \neq \emptyset$. Since the set is nonempty, $\exists x_i \in A(\delta_i)$. Now let $\delta_i = 2^{-i}$. Then the sequence $x_i$ tends to $x_0$, but $f(x_i)$ does not tend to $f(x_0)$, as it never enters $S_\epsilon(f(x_0))$. This is a contradiction, so $f$ must be continuous.
+\end{solution}
