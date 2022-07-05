@@ -643,7 +643,7 @@ $$|x-c| < \delta \Rightarrow |x-c| < \frac{c^2}{2} \epsilon \Rightarrow |x-c| < 
 which completes the proof.
 \end{solution}
 
-\subsection{Theorem 6.4}
+\subsection{Theorem 6.4} \label{thm3.6.4}
 
 \question{Let $(X,d_1)$ and $(Y,d_2)$ be two metric spaces and let $f:D \subseteq X \rightarrow Y$. The $f$ is \textbf{continuous at} point $x_0 \in D$ if and only if whenever $\{x_n:n\in\mathbb{Z}^+\}$ is a sequence in $D$ that converges to $x_0$, then the sequence $\{f(x_n):n\in\mathbb{Z}^+\}$ converges to $f(x_0)$ in $Y$.}
 
@@ -654,4 +654,34 @@ $$\forall \epsilon > 0 \exists N \in \N\text{ such that } n \in \N > N \Rightarr
 so that $f(x_n)$ tends to $f(x_0)$. \\
 $\Leftarrow$: \\
 Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuous. That means $\exists \epsilon > 0$ where $\forall \delta > 0, A(\delta_i) = f(S_{\delta_i}(x_0)) - S_\epsilon(x) \neq \emptyset$. Since the set is nonempty, $\exists x_i \in A(\delta_i)$. Now let $\delta_i = 2^{-i}$. Then the sequence $x_i$ tends to $x_0$, but $f(x_i)$ does not tend to $f(x_0)$, as it never enters $S_\epsilon(f(x_0))$. This is a contradiction, so $f$ must be continuous.
+\end{solution}
+
+\subsection{Exercise 6.5}
+
+\question{Let $S$ be a sequence in $\R$, and let $\mathbb{Z}^+$ have the discrete topology that it gets by saying that every point in $\mathbb{Z}^+$ is open. Prove that $S$ is continuous.}
+
+\begin{solution}
+ Set $\delta = 0.5$. Then $S_\delta(x) = \{x\}$, so $f(S_\delta(x)) = \{f(x)\} \in S_\epsilon(f(x)) \forall \epsilon > 0$
+\end{solution}
+
+\question{Let $p$ be a point, and let $Y = \{p\}$. Make $Y$ into a topological space by declaring that the sets $\emptyset$ and $Y = \{p\}$ are open. Let $f:\R \rightarrow Y$ be defined by $f(x) = p$ for all $x \in \R$. Prove that $f$ is continuous. This is a special case of a theorem that says that any constant function is continuous.}
+
+\begin{solution}
+ \\(Note: we have not defined convergence in this case where there is no metric) \\
+ For any sequence $x_n$ that converges to $x$, it is obvious that $f(x_n)$ is always $p$. Therefore, whenever $x_n$ is a sequence in $\R$ that converges to $x \in \R$, $f(x_n)$ is a (constant) sequence that converges to $f(x) = p$. By \hyperref[thm3.6.4]{Theorem 6.4}, $f$ is continuous.
+\end{solution}
+
+\question{Let $f: \R \rightarrow \R$ be defined by $$f(x) = \begin{cases} 1 & \text{if } x \text{ is rational} \\ -1 & \text{if } x \text{ is irrational} \end{cases}$$ Prove that $f$ is not continuous on $\R$. Is $f$ continuous at any point of $\R$?}
+
+\begin{solution}
+ \\$f$ is not continuous at any point of $\R$ (hence it is not continuous). \\
+ Let $\epsilon = 1$. We take for granted that between any two numbers, one can always find a rational number and an irrational number. This implies $\forall \delta > 0$, $S_\delta(x)$ contains both rational and irrational $x$. Therefore $f(S_\delta(x))$ contains both 1 and $-1$, and so it is not contained in $S_{0.5}(f(x)) \forall x \in \R$.
+\end{solution}
+
+\question{Let $f:\R^+ \rightarrow \R$ be defined by $$f(x) = \begin{cases} \frac{1}{q} & \text{if } x = \frac{p}{q} \text{ in lowest terms} \\ 0 & \text{if } x \text{ is irrational} \end{cases}$$ Is $f$ continuous? Is $f$ continuous at any point of $\R^+$?}
+
+\begin{solution}
+ At any $x \in \Q$, setting $\epsilon = \frac{f(x)}{2}$, one can see that $0 \notin S_\epsilon(f(x))$. However, since irrationals are dense in the reals (basically the same assumption as the previous question), $S_\delta(x)$ contains irrational numbers $\forall \delta > 0$. Then $f(S_\delta(x))$ contains $0$, so it cannot be a subset of $S_\epsilon(f(x))$. Hence $f$ is not continuous for all rational $x$. \\
+ However, $f$ is continuous at any irrational point. The proof will be described verbally, as it is cumbersome to construct the sets required, yet it adds nothing to what a verbal explanation provides. \\
+ First, given that $\epsilon > 0$, we can find the finite number of natural numbers where $\frac{1}{n} \geq \epsilon$. For each of these natural numbers $n$, we can list all of the finitely many fractions with a natural number as numerator and $n$ as denominator. Repeat this for all $n$, and we have a finite set of fractions $A$. Let $a$ denote the distance between $x$ and the largest fraction in $A$ that is smaller than $x$. Let $b$ denote the distance between $x$ and the smallest fraction in $A$ that is greater than $x$. Finally, we can set $\delta =$ min$\{a,b\}$. Consider $y \in S_\delta(x)$, where $x$ is irrational. If $y$ is rational, it is not in $A$ (or else the distance between $x$ and $y$ is smaller that both $a$ and $b$, which is a contradiction). Therefore its denominator $q$ in lowest terms must be so great that $\frac{1}{q} < \epsilon$, so $f(y) \in S_\epsilon(0)$. Otherwise, $y$ is irrational, and $f(y) = 0 \in S_\epsilon(0)$. Therefore, we have proven that $f(S_\delta(x)) \subseteq S_\epsilon(0)$, which means that $f$ is continuous at irrational $x$.
 \end{solution}
