@@ -607,3 +607,38 @@ Letting $n =$ max$\{N'+1,N\}$, we have $x_n \in S_r(x)$ for arbitrary $r$ and $N
 \begin{solution}
  $\exists r \in \R > 0, N \in \N$ such that $n \geq N \Rightarrow x_n \notin S_r(x)$
 \end{solution}
+
+\subsection{Exercise 6.2}
+
+\question{State precisely what it means when a function $f$ is \textit{not} continuous at a point $x_0$ in its domain.}
+
+\begin{solution}
+ $\exists \epsilon > 0$ where $\forall \delta > 0, \exists x \in S_\delta(x_0)$ such that $f(x) \notin S_\epsilon(f(x_0))$
+\end{solution}
+
+\question{Prove that the function defined by $$f(x) = \begin{cases} 1 & \text{if } x \geq 2 \\ -1 & \text{if } x < 2 \end{cases}$$ is not continuous at $x=2$, but is continuous everywhere else.}
+
+\begin{solution}
+ \\If $x\neq2$, setting $\delta = |x-2|$ suffices. \\
+ If $x=2$, then for $\epsilon = 1$, $\forall \delta > 0$,
+ $$x + \frac{\delta}{2} \in S_\delta(x) \text{ but } f\left(x + \frac{\delta}{2}\right) = -1 \notin S_1(1)$$
+\end{solution}
+
+\question{Prove that the function $g$ defined by $g(x) = \frac{1}{x}$ for $x \in \R$ and $x > 0$ is continuous on its domain.}
+
+\begin{solution}
+ \\We want to show that $g(x)$ is continuous at an arbitrary point $c$. In other words, $\forall \epsilon > 0, \exists \delta > 0$ such that $|x-c| < \delta \Rightarrow |f(x)-f(c)| < \epsilon$
+ 
+\begin{align*}
+ |f(x)-f(c)| &< \epsilon \\
+ \left|\frac{1}{x} - \frac{1}{c}\right| &< \epsilon \\
+ \frac{|x-c|}{cx} &< \epsilon \\
+ |x-c| &< cx\epsilon \\
+\end{align*}
+
+Now we can impose a limit for $\delta$, where $\delta \leq \frac{c}{2}$, so that $\frac{c}{2} \leq x \leq \frac{3c}{2}$. Substituting this into the inequality above yields
+$$|x-c| < \frac{c^2}{2} \epsilon$$
+Therefore, if we let $\delta =$ min$\{\frac{c^2}{2}\epsilon,\frac{c}{2}\}$, then
+$$|x-c| < \delta \Rightarrow |x-c| < \frac{c^2}{2} \epsilon \Rightarrow |x-c| < cx\epsilon \Rightarrow \frac{|x-c|}{cx} < \epsilon \Rightarrow \left|\frac{1}{x} - \frac{1}{c}\right| < \epsilon$$
+which completes the proof.
+\end{solution}
