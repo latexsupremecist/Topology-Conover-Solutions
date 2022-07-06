@@ -711,3 +711,32 @@ Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuo
 \begin{solution}
  \\This is very similar to our definition of open sets using the absolute value metric. Hence $f(x) = (x,0)$ is a homeomorphism. Similarly, $\R$ is homeomorphic the $y$-axis and any other straight line in $\R^2$.
 \end{solution}
+
+\subsection{Exercise 7.5}
+
+\question{Show that for any point $p \in \R$, $\{p\}$ is a retract of $\R$.}
+
+\begin{solution}
+ $f(x) = p \forall x \in \R$ is a retraction of $\R$ onto $\{p\}$.
+\end{solution}
+
+\question{Show that $(0,1)$ is a retract of $\R$.}
+
+\begin{solution}
+ \\\underline{\textbf{I probably did something wrong here}} \\
+ It seems that $(0,1)$ is not a retract (?) Proof: \\
+ Assume such a function $r$ exists, and let $r(0) = a$. Since $a \in (0,1)$, we have $0 < a < 1$. Let $\epsilon = \frac{a}{2}$. $\forall \delta > 0$, let $b =$ min$\{\epsilon, \frac{\delta}{2}\}$. Note that $b > 0$. Then $b \in S_\delta(0)$, but $b \notin S_\epsilon(a)$. Since this is true $\forall \delta > 0$, $r$ is not continuous, which is a contradiction. \\
+ If $(0,1)$ was a typo and the author meant $[0,1]$, then $$r(x) = \begin{cases} x & x \in [0,1] \\ 0 & x<0 \\ 1 & x > 1 \end{cases}$$ can be a retraction.
+\end{solution}
+
+\question{Show that $A \subseteq \R$ is a retract of $\R$ if and only if the identity function id$_A: A \rightarrow A$, defined by id$_A(a) = a$ for $a \in A$, can be \textit{extended} over $\R$ in the following sense. A function $f: A \rightarrow A$ can be \textit{extended} over $\R$ if there is a continuous function $F: \R \rightarrow \R$ such that $F(a) = f(a)$ for all $a \in A$.}
+
+\begin{solution}
+ If $A$ is a retract, $r$ is the required extension. If $F$ exists, it is a retraction.
+\end{solution}
+
+\question{Do you think that $\{0,1\}$ is a retract of $\R$? Why or why not?}
+
+\begin{solution}
+ \\Let $r(x) = 0$. Let $A = \{a \in \R|f(S_a(x)) = \{0\}\}$. If $A$ is empty, $r$ is not continuous at $x$ (let $\epsilon = 0.5$). Or else, $A$ must have a supremum , since $S_a(x)$ cannot contain 1. Then at least one of $S_\delta(x+a)$ or $S_\delta(x-a)$ must contain points which map to 0 and 1 $\forall \delta > 0$. Setting $\epsilon = 0.5$, $r$ cannot be continuous at both $x+a$ and $x-a$. Therefore, a retraction does not exists, and $\{0,1\}$ is not a retract.
+\end{solution}
