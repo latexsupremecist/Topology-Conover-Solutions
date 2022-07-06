@@ -706,4 +706,57 @@ Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuo
  \\We can use polar coordinates. Let the radius of the circle be $R$. For the square, given an angle $\theta$, draw a line in that direction, and let $s(\theta)$ be the supremum of all the lengths the line can take without exiting the square. Then
  $$f(r,\theta) = \left(r \times \frac{s(\theta)}{R}, \theta\right)$$
  is such a homeomorphism from the circle to the square. Using the same method, all convex polygons are homeomorphic with the circle, and hence each other.
+
+\question{It was state in the introduction that a circle is not topologically the same as a straight line segment. The reason for this is not because the circle is curved and the line is not ("curveness" is not topological). Rather , it is because of the points of the line that are not end points.}
+
+\begin{parts}
+ 
+ \part{Let $[a,b]$ be a closed interval on the real line with $a$ and $b$ both finite and $a < b$ (so $[a,b]$ is a line segment). Convince yourself that the property of not being an end point is a topological property; in other words, if $h:[a,b] \rightarrow Y$ is a homeomorphism then $x \neq a$ and $x \neq b$, $h(x)$ cannot be an "end point" of Y.}
+ 
+ 
+\begin{solution}
+ \\Let $h(a) = p$, $h([a,b]) = Y'$. If there is an open set containing $p$ in $Y'$, intuitively, there should also be an open set that contains $a$ in $[a,b]$. Since this is false, intuition tells us that any open set around $p$ cannot be contained in $Y'$. This shouldn't be possible if $p$ is not an endpoint.
+\end{solution}
+
+\part{Convince yourself that a line segment and a circle are not homeomorphic.}
+
+\begin{solution}
+ \\If they are homeomorphic, a circle should then have two distinct end points. There doesn't seem to be any "intuitive" way to map a line segment continuously onto the circle while preserving two end points.
+\end{solution}
+
+\end{parts}
+
+\question{We said in the discussion of Cartesian product (Section 3 of Chapter I) that $X$ is not a subset of $X \times Y$. However, $X$ is a "topological subset" of $X \times Y$ in the sense that $X$ is homeomorphic to a subset of $X \times Y$. Illustrate this case of $\R \times \R$ by convincing yourself that $\R$ is homeomorphic to the $x$-axis (= $\R \times \{0\}$) when the $x$-axis is given a topology as follows: a subset $U$ of the $x$-axis is open if and only if for each point $(x,0) \in U$, there is an $r > 0$ such tthat $S_r(x,0) \cap$ ($x$-axis) is contained in $U$. Is $\R$ homeomorphic to any other subset of $\R \times \R$ when that subset is topologized analogously?}
+
+\begin{solution}
+ \\This is very similar to our definition of open sets using the absolute value metric. Hence $f(x) = (x,0)$ is a homeomorphism. Similarly, $\R$ is homeomorphic the $y$-axis and any other straight line in $\R^2$.
+\end{solution}
+
+\subsection{Exercise 7.5}
+
+\question{Show that for any point $p \in \R$, $\{p\}$ is a retract of $\R$.}
+
+\begin{solution}
+ $f(x) = p \forall x \in \R$ is a retraction of $\R$ onto $\{p\}$.
+\end{solution}
+
+\question{Show that $(0,1)$ is a retract of $\R$.}
+
+\begin{solution}
+ \\\underline{\textbf{I probably did something wrong here}} \\
+ It seems that $(0,1)$ is not a retract (?) Proof: \\
+ Assume such a function $r$ exists, and let $r(0) = a$. Since $a \in (0,1)$, we have $0 < a < 1$. Let $\epsilon = \frac{a}{2}$. $\forall \delta > 0$, let $b =$ min$\{\epsilon, \frac{\delta}{2}\}$. Note that $b > 0$. Then $b \in S_\delta(0)$, but $b \notin S_\epsilon(a)$. Since this is true $\forall \delta > 0$, $r$ is not continuous, which is a contradiction. \\
+ If $(0,1)$ was a typo and the author meant $[0,1]$, then $$r(x) = \begin{cases} x & x \in [0,1] \\ 0 & x<0 \\ 1 & x > 1 \end{cases}$$ can be a retraction.
+\end{solution}
+
+\question{Show that $A \subseteq \R$ is a retract of $\R$ if and only if the identity function id$_A: A \rightarrow A$, defined by id$_A(a) = a$ for $a \in A$, can be \textit{extended} over $\R$ in the following sense. A function $f: A \rightarrow A$ can be \textit{extended} over $\R$ if there is a continuous function $F: \R \rightarrow \R$ such that $F(a) = f(a)$ for all $a \in A$.}
+
+\begin{solution}
+ If $A$ is a retract, $r$ is the required extension. If $F$ exists, it is a retraction.
+\end{solution}
+
+\question{Do you think that $\{0,1\}$ is a retract of $\R$? Why or why not?}
+
+\begin{solution}
+ \\Let $r(x) = 0$. Let $A = \{a \in \R|f(S_a(x)) = \{0\}\}$. If $A$ is empty, $r$ is not continuous at $x$ (let $\epsilon = 0.5$). Or else, $A$ must have a supremum , since $S_a(x)$ cannot contain 1. Then at least one of $S_\delta(x+a)$ or $S_\delta(x-a)$ must contain points which map to 0 and 1 $\forall \delta > 0$. Setting $\epsilon = 0.5$, $r$ cannot be continuous at both $x+a$ and $x-a$. Therefore, a retraction does not exists, and $\{0,1\}$ is not a retract.
 \end{solution}
