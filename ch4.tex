@@ -1,0 +1,16 @@
+\newpage
+
+\section{Topological Spaces and Concepts in General}
+
+\subsection{Exercise 2.6}
+
+\question{Let $X$ be a set. Verify that the indiscrete topology, the discrete topology and the finite-complement topology are in fact topologies on $X$.}
+
+\begin{solution}
+ \\Indiscrete Topology: \\
+ $\emptyset$ and $X$ are open sets, and any intersection/union of open sets are obviously either empty of $X$. \\
+ Discrete Topology: \\
+ $\emptyset$ and $X$ are open sets. Since any subset is open, any intersection/union of open sets must be a subset, and hence is open. \\
+ Finite-complement Topology: \\
+ $\empty set$ and $X$ are open sets. Let $A_i$ denote open sets. Then $X - \bigcup_i A_i \subseteq X - A_i$, where $X - A_i$ has a finite cardinality by definition. Therefore, $X - \bigcup_i A_i$ also has a finite cardinality, so $\bigcup_i A_i$ is open. Now let $B_i$ denote finitely many open sets. $X-B_i$ is finite, and so is $\bigcup_i (X - B_i)$ (finite union of finite sets is finite). Since $\bigcup_i (X - B_i) = X - \bigcap_i B_i$ which is finite, $\bigcap_i B_i$ is an open set.
+\end{solution}
