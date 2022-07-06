@@ -685,3 +685,29 @@ Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuo
  However, $f$ is continuous at any irrational point. The proof will be described verbally, as it is cumbersome to construct the sets required, yet it adds nothing to what a verbal explanation provides. \\
  First, given that $\epsilon > 0$, we can find the finite number of natural numbers where $\frac{1}{n} \geq \epsilon$. For each of these natural numbers $n$, we can list all of the finitely many fractions with a natural number as numerator and $n$ as denominator. Repeat this for all $n$, and we have a finite set of fractions $A$. Let $a$ denote the distance between $x$ and the largest fraction in $A$ that is smaller than $x$. Let $b$ denote the distance between $x$ and the smallest fraction in $A$ that is greater than $x$. Finally, we can set $\delta =$ min$\{a,b\}$. Consider $y \in S_\delta(x)$, where $x$ is irrational. If $y$ is rational, it is not in $A$ (or else the distance between $x$ and $y$ is smaller that both $a$ and $b$, which is a contradiction). Therefore its denominator $q$ in lowest terms must be so great that $\frac{1}{q} < \epsilon$, so $f(y) \in S_\epsilon(0)$. Otherwise, $y$ is irrational, and $f(y) = 0 \in S_\epsilon(0)$. Therefore, we have proven that $f(S_\delta(x)) \subseteq S_\epsilon(0)$, which means that $f$ is continuous at irrational $x$.
 \end{solution}
+
+%%insert ex 7.3 here
+\question{It was state in the introduction that a circle is not topologically the same as a straight line segment. The reason for this is not because the circle is curved and the line is not ("curveness" is not topological). Rather , it is because of the points of the line that are not end points.}
+
+\begin{parts}
+ 
+ \part{Let $[a,b]$ be a closed interval on the real line with $a$ and $b$ both finite and $a < b$ (so $[a,b]$ is a line segment). Convince yourself that the property of not being an end point is a topological property; in other words, if $h:[a,b] \rightarrow Y$ is a homeomorphism then $x \neq a$ and $x \neq b$, $h(x)$ cannot be an "end point" of Y.}
+ 
+ 
+\begin{solution}
+ \\Let $h(a) = p$, $h([a,b]) = Y'$. If there is an open set containing $p$ in $Y'$, intuitively, there should also be an open set that contains $a$ in $[a,b]$. Since this is false, intuition tells us that any open set around $p$ cannot be contained in $Y'$. This shouldn't be possible if $p$ is not an endpoint.
+\end{solution}
+
+\part{Convince yourself that a line segment and a circle are not homeomorphic.}
+
+\begin{solution}
+ \\If they are homeomorphic, a circle should then have two distinct end points. There doesn't seem to be any "intuitive" way to map a line segment continuously onto the circle while preserving two end points.
+\end{solution}
+
+\end{parts}
+
+\question{We said in the discussion of Cartesian product (Section 3 of Chapter I) that $X$ is not a subset of $X \times Y$. However, $X$ is a "topological subset" of $X \times Y$ in the sense that $X$ is homeomorphic to a subset of $X \times Y$. Illustrate this case of $\R \times \R$ by convincing yourself that $\R$ is homeomorphic to the $x$-axis (= $\R \times \{0\}$) when the $x$-axis is given a topology as follows: a subset $U$ of the $x$-axis is open if and only if for each point $(x,0) \in U$, there is an $r > 0$ such tthat $S_r(x,0) \cap$ ($x$-axis) is contained in $U$. Is $\R$ homeomorphic to any other subset of $\R \times \R$ when that subset is topologized analogously?}
+
+\begin{solution}
+ \\This is very similar to our definition of open sets using the absolute value metric. Hence $f(x) = (x,0)$ is a homeomorphism. Similarly, $\R$ is homeomorphic the $y$-axis and any other straight line in $\R^2$.
+\end{solution}
