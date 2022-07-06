@@ -685,3 +685,25 @@ Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuo
  However, $f$ is continuous at any irrational point. The proof will be described verbally, as it is cumbersome to construct the sets required, yet it adds nothing to what a verbal explanation provides. \\
  First, given that $\epsilon > 0$, we can find the finite number of natural numbers where $\frac{1}{n} \geq \epsilon$. For each of these natural numbers $n$, we can list all of the finitely many fractions with a natural number as numerator and $n$ as denominator. Repeat this for all $n$, and we have a finite set of fractions $A$. Let $a$ denote the distance between $x$ and the largest fraction in $A$ that is smaller than $x$. Let $b$ denote the distance between $x$ and the smallest fraction in $A$ that is greater than $x$. Finally, we can set $\delta =$ min$\{a,b\}$. Consider $y \in S_\delta(x)$, where $x$ is irrational. If $y$ is rational, it is not in $A$ (or else the distance between $x$ and $y$ is smaller that both $a$ and $b$, which is a contradiction). Therefore its denominator $q$ in lowest terms must be so great that $\frac{1}{q} < \epsilon$, so $f(y) \in S_\epsilon(0)$. Otherwise, $y$ is irrational, and $f(y) = 0 \in S_\epsilon(0)$. Therefore, we have proven that $f(S_\delta(x)) \subseteq S_\epsilon(0)$, which means that $f$ is continuous at irrational $x$.
 \end{solution}
+
+\subsection{Exercise 7.3}
+
+\question{Consider a closed interval $[a,b]$ in the real line with $a$ and $b$ both finite, and $a < b$. Make this interval into a topological space by giving it the metric topology induced by the absolute value metric $d(x,y) = |x-y|$, as in Section 3. Prove that $[0,1], \cong [2,4]$. This shows that length is \textit{not} a topological property - it is not necessarily preserved by a homeomorphism.}
+
+\begin{solution}
+ $f(x) = 2x + 2$ is a homeomorphism between the spaces.
+\end{solution}
+
+\question{Consider the open unit interval $(0,1)$ as a topological space by giving it the metric topology induced by the absolute value metric $d(x,y) = |x-y|$ as in Section 3. Prove that $(0,1) \cong \R$. This shows again that length is not a topological property - it is not necessarily preserved by a homeomorphism. In fact, we have here an interval of finite length homeomorphic to one whose length is infinite!}
+
+\begin{solution}
+ $f(x) = \pi(x-0.5)$ is a homeomorphism.
+\end{solution}
+
+\question{Prove that the unit circle centered at the origin is homeomorphic to a square with unit perimeter centered at the origin.}
+
+\begin{solution}
+ \\We can use polar coordinates. Let the radius of the circle be $R$. For the square, given an angle $\theta$, draw a line in that direction, and let $s(\theta)$ be the supremum of all the lengths the line can take without exiting the square. Then
+ $$f(r,\theta) = \left(r \times \frac{s(\theta)}{R}, \theta\right)$$
+ is such a homeomorphism from the circle to the square. Using the same method, all convex polygons are homeomorphic with the circle, and hence each other.
+\end{solution}
