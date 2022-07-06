@@ -706,6 +706,7 @@ Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuo
  \\We can use polar coordinates. Let the radius of the circle be $R$. For the square, given an angle $\theta$, draw a line in that direction, and let $s(\theta)$ be the supremum of all the lengths the line can take without exiting the square. Then
  $$f(r,\theta) = \left(r \times \frac{s(\theta)}{R}, \theta\right)$$
  is such a homeomorphism from the circle to the square. Using the same method, all convex polygons are homeomorphic with the circle, and hence each other.
+ \end{solution}
 
 \question{It was state in the introduction that a circle is not topologically the same as a straight line segment. The reason for this is not because the circle is curved and the line is not ("curveness" is not topological). Rather , it is because of the points of the line that are not end points.}
 
@@ -759,4 +760,33 @@ Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuo
 
 \begin{solution}
  \\Let $r(x) = 0$. Let $A = \{a \in \R|f(S_a(x)) = \{0\}\}$. If $A$ is empty, $r$ is not continuous at $x$ (let $\epsilon = 0.5$). Or else, $A$ must have a supremum , since $S_a(x)$ cannot contain 1. Then at least one of $S_\delta(x+a)$ or $S_\delta(x-a)$ must contain points which map to 0 and 1 $\forall \delta > 0$. Setting $\epsilon = 0.5$, $r$ cannot be continuous at both $x+a$ and $x-a$. Therefore, a retraction does not exists, and $\{0,1\}$ is not a retract.
+\end{solution}
+
+\subsection{Exercise 8.3}
+
+Note: Someone who actually knows topology should look into this.
+
+\question{Determine all topologically different connected 1-manifolds that you can (\textit{connected} means all in one piece). Try to determine any essential differences between them.}
+
+\begin{solution}
+ \\$[a,b], [a,b), (a,b], (a,b)$ and a circle. They differ by the number of boundary points they contain, and whether or not a boundary point exists (in the universe but outside of the set).
+\end{solution}
+
+\question{Is a space that looks like a $Y$ a topological 1-manifold? Why or why not?}
+
+\begin{solution}
+ Consider the point where all three branches of the $Y$ meet. Any open set containing that point is essentially a smaller $Y$, and there is no homeomorphism between that and any open subset of $\R$ or $\R^+$.
+\end{solution}
+
+\question{Give as many different examples of connected topological 2-manifolds as you can and indicate why you think they are different.}
+
+\begin{solution}
+ \\(There are probably more) \\
+ Those without boundary and those with boundary, e.g. $\{(x,y)|x^2 + y^2 < 1\}$ and $\{(x,y)|x^2 + y^2 \leq 1\}$.
+\end{solution}
+
+\question{Find out what a Möbius strip and a Klein bottle are. Do you want to add anything to your answers to Problems 1 or 3 above?}
+
+\begin{solution}
+See "list_of_skipped_questions.txt"
 \end{solution}
