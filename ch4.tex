@@ -61,7 +61,26 @@ It contains $\emptyset$ and $X$. Since there are only 3 open sets, brute forcing
  $\{\emptyset, \{0\}, \{0,1\}, \{0,2\}, \{0,1,2\}\}$ \\
  $\{\emptyset, \{1\}, \{0,1\}, \{1,2\}, \{0,1,2\}\}$ \\
  $\{\emptyset, \{2\}, \{0,2\}, \{1,2\}, \{0,1,2\}\}$ \\
- %%0,1,(0,1),(0,2)
- %%repeat for 0,2, then for 1 and then 2
- %%finally all (discrete)
+ $\{\emptyset, \{0\}, \{1\}, \{0,1\}, \{0,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{2\}, \{0,1\}, \{0,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{1\}, \{0,1\}, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{1\}, \{2\}, \{0,1\}, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{2\}, \{0,2\}, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{1\}, \{2\}, \{0,2\}, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{1\}, \{2\}, \{0,1\}, \{0,2\}, \{1,2\}, \{0,1,2\}\}$ \\
+\end{solution}
+
+\question{Verify that the Sorgenfrey topology defined on the real line is in fact a topology. Is the interval $(0,1)$ open in this topology? How about $(0,1]$? Is $[0,1]$ closed?}
+
+\begin{solution}
+ \\The Sorgenfrey topology obviously contains $\emptyset$ and $\R$. Let $A_i$ denote open sets. Then
+ $$\forall x \in \bigcup_i A_i, x \in A_i \Rightarrow x \in [a,b) \subseteq A_i \subseteq \bigcup_i A_i$$
+ so any union of open sets is open. Now let $B_i$ denote finitely many open sets. Now if $x \in B_i$, we let $\{p_i,q_i\} \subset \R$ such that $x \in [p_i,q_i) \subseteq B_i$. Let $P = \{p_i\}$ and $Q = \{q_i\}$. Since both $P$ and $Q$ are finite, $P$ has a maximum $p$ and $Q$ has a minimum $Q$.
+ Now
+ $$x \in \bigcap_i B_i \Rightarrow x \in [p,q) \subseteq [p_i,q_i) \subseteq B_i \forall i$$
+ Since $[p,q)$ is a subset of $B_i \forall i$, it is a subset of $\bigcap_i B_i$, hence any finite intersection of open sets is open. This shows that the Sorgenfrey topology is a topology. \\
+ $(0,1)$ is open, because
+ $$\forall x \in (0,1), x \in [x,1) \subset (0,1)$$
+ $(0,1]$ is not open, because $1 \in (0,1]$, but if $1 \in [a,b)$, then $\frac{1+b}{2}$ is an element of $[a,b)$ but not $(0,1]$, so $1 \in [a,b) \subseteq (0,1]$ cannot be true. \\
+ Consider $A = \R - [0,1]$ and let $x \in A$. Either $x < 0$, and $x \in [x,\frac{x}{2}) \subset A$, or $x > 1$, and $x \in [x,x+1)$. Therefore, $A$ is open, so $[0,1]$ is closed.
 \end{solution}
