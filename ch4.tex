@@ -84,3 +84,109 @@ It contains $\emptyset$ and $X$. Since there are only 3 open sets, brute forcing
  $(0,1]$ is not open, because $1 \in (0,1]$, but if $1 \in [a,b)$, then $\frac{1+b}{2}$ is an element of $[a,b)$ but not $(0,1]$, so $1 \in [a,b) \subseteq (0,1]$ cannot be true. \\
  Consider $A = \R - [0,1]$ and let $x \in A$. Either $x < 0$, and $x \in [x,\frac{x}{2}) \subset A$, or $x > 1$, and $x \in [x,x+1)$. Therefore, $A$ is open, so $[0,1]$ is closed.
 \end{solution}
+
+\question{Consider the topological spaces $(\R, \mathcal{I}), (\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$ and with the finite-complement topology (where $\mathcal{U}$ denotes the usual topology on $\R$ s in Chapter 3).}
+
+\begin{parts}
+ 
+ \part{If $p \in \R$, is $\{p\}$ open in any of these spaces? Which ones?}
+ 
+ 
+\begin{solution}
+ $(\R, \mathcal{D})$. 
+\end{solution}
+
+\part{If $p \in \R$, is $\{p\}$ closed in any of these spaces? Which ones?}
+
+\begin{solution}
+$(\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$, and the finite-complement topology.
+\end{solution}
+
+\end{parts}
+
+\question{In which of these spaces is $(a,b)$ open? $[a,b)$? $(a,b]$? $[a,b]$?}
+
+\begin{solution}
+ \\$(a,b)$: \\
+ $(\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$ \\
+ $[a,b)$: \\
+ $(\R, \mathcal{D}), (\R, \mathcal{S})$ \\
+ $(a,b]$: \\
+ $(\R, \mathcal{D})$ \\
+ $[a,b]$: \\
+ $(\R, \mathcal{D})$ \\
+\end{solution}
+
+\begin{parts}
+
+\part{Is the set $\{x \in \R: x \neq \frac{1}{n}\}$ open in any of the spaces? Is it closed in any of them?}
+
+\begin{solution}
+ \\Open: \\
+ $(\R, \mathcal{D})$ \\
+ Closed: \\
+ $(\R, \mathcal{D})$ \\
+\end{solution}
+
+\part{Is the set $\{x \in \R: x \neq \frac{1}{n} \text{ and } x \neq 0\}$ open in any of the spaces? Is it closed in any of them?}
+
+\begin{solution}
+ \\Open: \\
+ $(\R, \mathcal{D})$ \\
+ Closed: \\
+ $(\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$ \\
+\end{solution}
+
+\end{parts}
+
+\question{Consider the spaces of Problem 5 above again, together with the three spaces that can be defined on $\{0,1\}$.}
+
+\begin{parts}
+ 
+ \part{In which of these spaces are true: If $x$ and $y$ are two distinct points in the space then either there exists an open set $U$ such that $x \in U$ and $y \notin U$, or there exists an open set $V$ such that $y \in V$ and $x \notin V$. (A space for which this statement holds is called a T$_0$-space.)}
+ 
+\begin{solution}
+ $(\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$, the finite-complement topology, and the Sierpinski space.
+\end{solution}
+
+\part{In which of these spaces is the following statement true: If $x$ and $Y$ are two distinct points in the space, then there exists an open set $U$ such that $x \in U$ and $y \notin U$, and there exists an open set $v$ such that $y \in V$ and $x \notin V$. (A space for which this statement holds is called a T$_1$-space.)}
+
+\begin{solution}
+ $(\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$, and the finite-complement topology.
+\end{solution}
+
+\part{In which of these spaces is the following statement true: If $x$ and $y$ are two distinct points in the space, the there exist open sets $U$ and $V$ such that $x \in U$, $y \in V$ and $U \cap V = \emptyset$. (A space for which this statement holds is called a T$_2$-space or a Hausdorff space.)}
+
+\begin{solution}
+  $(\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$
+\end{solution}
+
+\end{parts}
+
+\question{Show that every T$_2$-space is a T$_1$-space, and that every T$_1$-space is a T$_0$-space, and give an example of a T$_0$-space that is not a T$_1$-space, and an example of a T$_1$-space that is not a T$_2$-space.}
+
+\begin{solution}
+ \\T$_2$-space $\Rightarrow$ T$_1$-space: Since $U \cap V \neq \emptyset$, $x \notin V$ and $y \notin U$, so $V$ and $U$ are open sets that make the space a T$_1$-space. \\
+T$_1$-space $\Rightarrow$ T$_0$-space: either one of $U$ and $V$ make the space a T$_0$-space. \\
+T$_0$-space that is not a T$_1$-space: the Sierpinski space \\
+T$_1$-space that is not a T$_2$-space: the finite-complement topology \\
+\end{solution}
+
+\question{A topological space $X$ is said to be \textbf{metrizable} if a metric can be defined on $X$ so that a set is open in the metric topology induced by this metric if and only if it is open in the topology that is already on the space.}
+
+\begin{parts}
+ 
+ \part{Let $X$ be a set with more than one point. Prove that $(X, \mathcal{I})$ is \textit{not} metrizable. Thus the indiscrete topology on a set with more than one point is an example of a topological space that is \textit{not} a metric space.}
+ 
+ 
+\begin{solution}
+ \\If $X$ has more than one point, it has 2 distinct points $x$ and $y$, where we let $r = d(x,y) > 0$ by the definition of a metric. $S_{\frac{r}{2}}(x)$ is an open space according to the metric. However, it is neither empty (contains $x$) nor the universe (does not contain $y$). This forms a contradiction.
+\end{solution}
+
+\part{Let $X$ be a set. Define a function from $X \times X = \{(x,y):x,y\in X\}$ to $\R$ by $$d(x,y) = \begin{cases} 1 & \text{if } x \neq y \\ 0 \text{if } x = y \end{cases}$$ Prove that $d$ is a metric on $X$. What is the metric topology induced by $d$?}
+
+\begin{solution}
+ \\Obviously, $d(x,y) = 0$ if and only if $x=y$, $d(x,y) \geq 0$, $d(x,y) = d(y,x)$. For the triangle inequality $d(x,y) \leq d(x,z) + d(y,z)$, note that it is trivial if $x=y$. If not, at least one of $d(x,z)$ and $d(y,z)$ must be nonzero, so the inequality holds. Therefore, $d(x,y)$ is a metric. \\
+ $\forall x \in X, S_{0.5}(x) = \{x\}$. Since all singleton sets are open, the metric topology induced by $d$ is the discrete topology.
+\end{solution}
+\end{parts}
