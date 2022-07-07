@@ -14,3 +14,54 @@
  Finite-complement Topology: \\
  $\empty set$ and $X$ are open sets. Let $A_i$ denote open sets. Then $X - \bigcup_i A_i \subseteq X - A_i$, where $X - A_i$ has a finite cardinality by definition. Therefore, $X - \bigcup_i A_i$ also has a finite cardinality, so $\bigcup_i A_i$ is open. Now let $B_i$ denote finitely many open sets. $X-B_i$ is finite, and so is $\bigcup_i (X - B_i)$ (finite union of finite sets is finite). Since $\bigcup_i (X - B_i) = X - \bigcap_i B_i$ which is finite, $\bigcap_i B_i$ is an open set.
 \end{solution}
+
+\question
+
+\begin{parts}
+ 
+ \part{Verify that Sierpinski space is a topological space.}
+ 
+ 
+\begin{solution}
+It contains $\emptyset$ and $X$. Since there are only 3 open sets, brute forcing through all possible unions/intersections show that they are also open sets.
+\end{solution}
+
+\part{We said that there are only three different topologies that can be assigned to the 2 point set $\{0,1\}$.  Is the collection of $\{\emptyset, \{1\},\{0,1\}\}$ one of those three topologies on $\{0,1\}$?}
+
+\begin{solution}
+ Yes. The same approach for (a) can be used here, since this is essentially the Sierpinski space with 0 and 1 reversed.
+\end{solution}
+
+\part{What is $\{0,1\}$ with the finite-complement topology?}
+
+\begin{solution}
+ $\{\emptyset, \{0\}, \{1,\}, \{0,1\}\}$
+\end{solution}
+\end{parts}
+
+\question{List all topologies that can be assigned to a 3 point set.}
+
+\begin{solution}
+ \\$\{\emptyset, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{1\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0,1\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{0,1\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{0,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{1\}, \{0,1\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{1\}, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{2\}, \{0,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{2\}, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{1\}, \{0,1\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{2\}, \{0,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{1\}, \{2\}, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{0\}, \{0,1\}, \{0,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{1\}, \{0,1\}, \{1,2\}, \{0,1,2\}\}$ \\
+ $\{\emptyset, \{2\}, \{0,2\}, \{1,2\}, \{0,1,2\}\}$ \\
+ %%0,1,(0,1),(0,2)
+ %%repeat for 0,2, then for 1 and then 2
+ %%finally all (discrete)
+\end{solution}
