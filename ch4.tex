@@ -187,16 +187,32 @@ T$_1$-space that is not a T$_2$-space: the finite-complement topology \\
 \end{solution}
 \end{parts}
 
-\subsection{Theorem 3.2}
+\subsection{Theorem 3.2} \label{thm4.3.2}
 
 \question{Let $(X, d_1)$ and $(Y, d_2)$ be metric spaces and let $f: X \rightarrow Y$. Then $f$ is continuous at $x_0 \in X$ if and only if whenever $V$ is an open subset of $Y$ with $f(x_0) \in V$, then there exists an open subset $U$ of $X$ such that $x_0 \in U$ and $f(U) \subseteq V$.}
  
  
 \begin{solution}
  \\$\Rightarrow$: \\
- Let $V$ be open, and let $U$ be given. We now prove that $U$ is open. Since $V$ is open, $\forall v = f(x_0) \in V$, $\exists \epsilon > 0$ where $S_\epsilon(v) \subseteq V$. Since continuity is implied, $\exists \delta > 0$ where $f(S_\delta(x_0)) \subseteq S_\epsilon(v)$. Therefore $S_\delta(x_0) \subseteq U$. Now note that
- $$U = \bigcup_{x_0 \in U} S_\delta(x_0)$$
- Since $U$ is a union of open sets, $U$ is open. \\
+ Let $V$ be open. Since $V$ is open, $\forall v = f(x_0) \in V$, $\exists \epsilon > 0$ where $S_\epsilon(v) \subseteq V$. Since continuity is implied, $\exists \delta > 0$ where $f(S_\delta(x_0)) \subseteq S_\epsilon(v)$. Therefore $S_\delta(x_0)$ is the desired open $U$. \\
  $\Leftarrow$: \\
- Let $f(x_0) = v$. $\forall \epsilon > 0$, $V = S_\epsilon(v)$ is open. Then an open $U$ exists. By definition, $x_0 \in U$, which is open, so $\exists \delta > 0$ such that $S_\delta(x_0) \in U$. This demonstrates that $f$ is continuous by the $\epsilon-\delta$ definition.
+ Let $f(x_0) = v$. $\forall \epsilon > 0$, $V = S_\epsilon(v)$ is open. Then an open $U$ exists where $x_0 \in U$. By definition, U is open, so $\exists \delta > 0$ such that $S_\delta(x_0) \in U$. Then
+ $$f(S_\delta(x_0)) \subseteq f(U) \subseteq V = S_\epsilon(v)$$
+ This demonstrates that $f$ is continuous by the $\epsilon-\delta$ definition.
 \end{solution}
+
+\subsection{Theorem 3.4}
+
+\question{Let $X$ and $Y$ be topological spaces and let $f:X \rightarrow Y$. Then $f$ is continuous on $X$ if and only if whenever $V$ is an open subset of $Y$, then $f^{-1}(V)$ is open in $X$.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Based on \hyperref[thm4.3.2]{Theorem 3.2}, we have an open $U_x \forall f(x) \in V$ such that $f(U_x) \subseteq V$. Therefore, $U_x \subseteq f^{-1}(V)$. Then
+ $$f^{-1}(V) = \bigcup_{x \in f^{-1}(V)} U_x$$
+ Since $f^{-1}(V)$ is a union of open sets, it is open. \\
+ $\Leftarrow$: \\
+ Similar to the second part of \hyperref[thm4.3.2]{Theorem 3.2}, let $f(x_0) = v$. $\forall \epsilon > 0$, $V = S_\epsilon(v)$ is open. Then $f^{-1}(V)$ is open (and contains $x_0$), so $\exists \delta > 0$ such that $S_\delta(x_0) \in f^{-1}(V)$. Then
+ $$f(S_\delta(x_0)) \subseteq V = S_\epsilon(v)$$
+ This demonstrates that $f$ is continuous by the $\epsilon-\delta$ definition.
+\end{solution}
+
