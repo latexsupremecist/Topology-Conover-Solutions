@@ -102,9 +102,7 @@ It contains $\emptyset$ and $X$. Since there are only 3 open sets, brute forcing
 $(\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$, and the finite-complement topology.
 \end{solution}
 
-\end{parts}
-
-\question{In which of these spaces is $(a,b)$ open? $[a,b)$? $(a,b]$? $[a,b]$?}
+\part{In which of these spaces is $(a,b)$ open? $[a,b)$? $(a,b]$? $[a,b]$?}
 
 \begin{solution}
  \\$(a,b)$: \\
@@ -116,8 +114,6 @@ $(\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$, and the finite-comple
  $[a,b]$: \\
  $(\R, \mathcal{D})$ \\
 \end{solution}
-
-\begin{parts}
 
 \part{Is the set $\{x \in \R: x \neq \frac{1}{n}\}$ open in any of the spaces? Is it closed in any of them?}
 
@@ -190,3 +186,17 @@ T$_1$-space that is not a T$_2$-space: the finite-complement topology \\
  $\forall x \in X, S_{0.5}(x) = \{x\}$. Since all singleton sets are open, the metric topology induced by $d$ is the discrete topology.
 \end{solution}
 \end{parts}
+
+\subsection{Theorem 3.2}
+
+\question{Let $(X, d_1)$ and $(Y, d_2)$ be metric spaces and let $f: X \rightarrow Y$. Then $f$ is continuous at $x_0 \in X$ if and only if whenever $V$ is an open subset of $Y$ with $f(x_0) \in V$, then there exists an open subset $U$ of $X$ such that $x_0 \in U$ and $f(U) \subseteq V$.}
+ 
+ 
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Let $V$ be open, and let $U$ be given. We now prove that $U$ is open. Since $V$ is open, $\forall v = f(x_0) \in V$, $\exists \epsilon > 0$ where $S_\epsilon(v) \subseteq V$. Since continuity is implied, $\exists \delta > 0$ where $f(S_\delta(x_0)) \subseteq S_\epsilon(v)$. Therefore $S_\delta(x_0) \subseteq U$. Now note that
+ $$U = \bigcup_{x_0 \in U} S_\delta(x_0)$$
+ Since $U$ is a union of open sets, $U$ is open. \\
+ $\Leftarrow$: \\
+ Let $f(x_0) = v$. $\forall \epsilon > 0$, $V = S_\epsilon(v)$ is open. Then an open $U$ exists. By definition, $x_0 \in U$, which is open, so $\exists \delta > 0$ such that $S_\delta(x_0) \in U$. This demonstrates that $f$ is continuous by the $\epsilon-\delta$ definition.
+\end{solution}
