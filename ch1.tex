@@ -1,0 +1,39 @@
+\section{Sets and Functions}
+\subsection{Exercises 1.2}
+\question{State precisely what it means when two sets A and B are not equal.}
+
+\begin{solution}
+  $A \neq B \implies$ either \\
+  1) $A \subset B$ and $B \not\subset A$ or\\
+  2) $B \subset A$ and $A \not\subset B$\\
+\end{solution}
+
+\setcounter{question}{0}
+\subsection{Exercises 2.2}
+
+\question{What is $\mathcal{P}(\{1,2,3\})$}
+\begin{solution}
+  $\{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}\}$
+\end{solution}
+
+\question{How many elements does a power set of n elements have?}
+\begin{solution}
+  Observe that each element in the power set either contains a given element from the original set or it does not, hence there are 2 possibilities for each of the n elements. Therefore, a power set of n elements has $2^n$ elements.\\\textit{A formal proof likely using induction is left as an exercise.}
+\end{solution}
+
+\question{Are the following statements true?}
+\begin{parts}
+\part{$x\in X \iff \{x\}\in\mathcal{P}(X)$}}
+\begin{solution}
+  True.
+\end{solution}
+\part{$\{x\}\in\mathcal{P}(X) \iff \{x\}\subset X$}
+\begin{solution}
+  True. Consider $\{x\} \in \mathcal{P}(X)$. By definition $x \in X \implies \{x\} \subset X$.\\
+  Also $\{x\} \subset X \implies x \in X \implies \{x\} \in \mathcal{P}(X)$ by definition.
+\end{solution}
+\part{$\{x\}\subset\mathcal{P}(X) \iff x\subset X$}
+\begin{solution}
+  False. $x\not\subset X$ by definition an element cannot be a subset.
+\end{solution}
+\end{parts}
