@@ -222,3 +222,56 @@ T$_1$-space that is not a T$_2$-space: the finite-complement topology \\
 \subsection{Exercise 3.5}
 \setcounter{question}{0}
 
+\question{Consider $(\R, \mathcal{I}), (\R, \mathcal{D}), (\R, \mathcal{U}), (\R, \mathcal{S})$ and $(\R, \mathcal{F})$, the real line with the indiscrete topology, the discrete topology, the usual metric topology, the Sorgenfrey topology and the finite-complement topology, respectively. Let $f: \R \rightarrow \R$ be the identity function defined by $f(r)=r$ for all real numbers $r$. Determine all possible choices for $\mathcal{J}_1$ and $\mathcal{J}_2$ from $\mathcal{I}, \mathcal{D}, \mathcal{U}, \mathcal{S}, \mathcal{F}$ so that $f:(\R, \mathcal{J}_1) \rightarrow (\R, \mathcal{J}_2)$ is continuous.}
+
+\begin{solution}
+ 
+ \begin{center}
+\begin{tabular}{|c||c|c|c|c|c|}
+\hline
+ & $\mathcal{I}$ & $\mathcal{D}$ & $\mathcal{U}$ & $\mathcal{S}$ & $\mathcal{F}$ \\
+ \hline \hline
+ $\mathcal{I}$ & \cmark & \xmark & \xmark & \xmark & \xmark \\
+ \hline
+ $\mathcal{D}$ & \cmark & \cmark & \cmark & \cmark & \cmark \\
+ \hline
+ $\mathcal{U}$ & \cmark & \xmark & \cmark & \xmark & \cmark \\
+ \hline
+ $\mathcal{S}$ & \cmark & \xmark & \cmark & \cmark & \cmark \\
+ \hline
+ $\mathcal{F}$ & \cmark & \xmark & \xmark & \xmark & \cmark \\
+ \hline
+\end{tabular}
+\end{center}
+ Where the rows denote $\mathcal{J}_1$ and the columns denote $\mathcal{J}_2$. 
+\end{solution}
+
+\question{Let $x$ be a set and let $\mathcal{J}$ be any topology on $X$. There is a topology $\mathcal{J}$' that can be assigned to $X$ so that the identity function from $(X, \mathcal{J}')$ to $(X\mathcal{J})$ is always continuous no matter what $\mathcal{J}$ s. What is it?}
+
+\begin{solution}
+ The discrete topology $\mathcal{D}$.
+\end{solution}
+
+\question{Let $X$ be any set and let $\mathcal{J}$ be any topology on $X$. There is a topology $\mathcal{J}'$ that can be given to $X$ so that the identity function from $(X, \mathcal{J})$ to $(X, \mathcal{J}')$ is always continuous no matter what $\mathcal{J}$ is. What is it?}
+
+\begin{solution}
+ The indiscrete topology $\mathcal{I}$.
+\end{solution}
+
+\question{A function that preserves open sets is called an \textbf{open function}. More precisely, a function $f:X \rightarrow Y$ is an open function if whenever $U$ is open in $X$, then $f(U)$ is open in $Y$.}
+
+\begin{parts}
+ 
+ \part{Give an example of a continuous function that is not open.}
+ 
+\begin{solution}
+ $f(r) = r$ where $X$ is the real line with the discrete topology and $Y$ is the real line with the indiscrete topology.
+\end{solution}
+
+\part{Give an example of an open function that is not continuous.}
+
+\begin{solution}
+ $f(r) = r$ where $X$ is the real line with the indiscrete topology and $Y$ is the real line with the discrete topology.
+\end{solution}
+
+\end{parts}
