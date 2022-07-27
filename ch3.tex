@@ -68,7 +68,7 @@ As $\forall x \in A \exists$ an open interval $\subseteq A$ which contains $x$, 
 \\ $\forall$ open intervals $(a-r,a+r)$, $b=a-\frac{r}{2}$ is a point in that interval which is outside of $[a,b)$.
 \end{solution}
 
- \part{The set $A = \{x\in\R:x\neq\frac{1}{n},\text{ for }n\in\mathbb{Z}^+\}$}
+ \part{The set $A = \{x\in\R:x\neq\frac{1}{n},\text{ for }n\in\Z^+\}$}
  
  
 \begin{solution}
@@ -177,12 +177,12 @@ The same proof is used for the base case and the induction step.
 
 \begin{parts}
  
- \part{The set $\mathbb{Z}$ of integers.}
+ \part{The set $\Z$ of integers.}
  \part{The set of rational numbers.}
  \part{A set consisting of a single point.}
  \part{An interval of the form $[a,b)$, where $a < b$.}
- \part{The set $A = \{x\in\R: x \neq \frac{1}{n} \text{ for } n \in \mathbb{Z}^+\}$.}
- \part{The set $A = \{x\in\R: x \neq \frac{1}{n} \text{ for } n \in \mathbb{Z}^+ \text{ and } x \neq 0\}$.}
+ \part{The set $A = \{x\in\R: x \neq \frac{1}{n} \text{ for } n \in \Z^+\}$.}
+ \part{The set $A = \{x\in\R: x \neq \frac{1}{n} \text{ for } n \in \Z^+ \text{ and } x \neq 0\}$.}
  
  
 \begin{solution}
@@ -345,7 +345,7 @@ so $A$ is an open set under this metric. Similarly, if $B$ is an open set under 
  A similar approach is used for the second and third set, noting the special cases for $x=1$ and $x=2$.
 \end{solution}
 
-\question{Let $(\mathbb{Z},d)$ be the space of integers with the metric topology induced by the absolute value metric. Show that \textit{every} subset of $\mathbb{Z}$ is open in $(\mathbb{Z},d)$. In particular, any set consisting of a single point is open in $(\mathbb{Z},d)$.}
+\question{Let $(\Z,d)$ be the space of integers with the metric topology induced by the absolute value metric. Show that \textit{every} subset of $\Z$ is open in $(\Z,d)$. In particular, any set consisting of a single point is open in $(\Z,d)$.}
 
 \begin{solution}
  \\Let $A$ be a subset, and let $r = \frac{1}{2}$. Then $\forall x \in A$,
@@ -423,23 +423,23 @@ $|A| = c$ by the Cantor-Bernstein Theorem.
  $$n < x < \Omega \text{ such that } x \in (n,\Omega) \subseteq [n+1,\Omega)$$
 \end{solution}
 
-\question{Supplementary: No countable collection of subsets of $[0,\Omega]$ intersect at $\{\Omega\}$ only.}
+\question{Supplementary: No countable collection of open subsets of $[0,\Omega]$ intersect at $\{\Omega\}$ only.} \label{supp}
 
 \begin{solution}
- \\Let $A_n$ be an open set in the collection. Since $\Omega \in A$,
- $$\Omega \in (a_n,\Omega] \subseteq A$$
+ \\Let $A_n$ be an open set in the collection. Since $\Omega \in A_n$,
+ $$\Omega \in (a_n,\Omega] \subseteq A_n$$
  Where $(a_n,\Omega] = [a_n+1,\Omega]$. Let $b_n = a_n+1$, and consider
  $$b = \bigcup_{n \in \N} b_n$$
- The union of ordinals (b) is an ordinal that is greater than all of the ordinals in the union $(b > b_n)$. \\
+ The union of ordinals $(b)$ is an ordinal that is greater than or equal to all of the ordinals in the union $(b \geq b_n)$. Moreover, this is a countable union of countable sets, so it is still countable, hence $b < \Omega$. \\
  Since we have subsets of $A_n$,
  $$\bigcap_{n \in \N} [b_n,\Omega] \subseteq \bigcap_{n \in \N} A_n$$
- Since $b > b_n \forall n \in \N$, $b$ is an element of the set in the left, meaning the countable ordinal $b$ is an element of the intersection, which is a contradiction.
+ Since $b \geq b_n \forall n \in \N$, $b$ is an element of the set in the left, meaning the countable ordinal $b$ is an element of the intersection, which is a contradiction.
 \end{solution}
 
 \subsection{Exercise 4.6}
 \setcounter{question}{0}
 
-\question{Show that $\omega = [0,\omega)$ with the order topology is a discrete space, so is the same as $\mathbb{Z}^+\cap\{0\}$ when given the metric topology induced by the absolute value metric on $\R$.}
+\question{Show that $\omega = [0,\omega)$ with the order topology is a discrete space, so is the same as $\Z^+\cap\{0\}$ when given the metric topology induced by the absolute value metric on $\R$.}
 
 \begin{solution}
  \\First we prove that all singleton sets $\{x\}$ are open.
@@ -447,7 +447,7 @@ $|A| = c$ by the Cantor-Bernstein Theorem.
  $$x \neq 0 \Rightarrow x \in (x-1,x+1) \subseteq \{x\}$$
  Note that $x-1$ exists $\forall x \neq 0$, as $x$ is a nonzero natural number. \\
  Since
- $$\omega = \mathbb{Z}^+ \cup \{0\}$$
+ $$\omega = \Z^+ \cup \{0\}$$
  and both are discrete, they are the same.
 \end{solution}
 
@@ -470,20 +470,20 @@ $|A| = c$ by the Cantor-Bernstein Theorem.
  $\forall N \in \N > 0, r > 0, \exists r > 0, n > N$ such that $x_n \notin S_r(x)$
 \end{solution}
 
-\question{Let $\{x_n:n\in\mathbb{Z}^+\}$ be the sequence in $\R$ defined by $x_n = \frac{1}{n}$. Does this sequence converge? To what? Prove it.}
+\question{Let $\{x_n:n\in\Z^+\}$ be the sequence in $\R$ defined by $x_n = \frac{1}{n}$. Does this sequence converge? To what? Prove it.}
 
 \begin{solution}
  \\It converges to 0. We take for granted that natural numbers are unbounded above, i.e. $\forall r \in \R \exists n \in \N$ such that $n > r$. Then $\forall r > 0$,
  $\exists N \in \N > \frac{1}{r}$, so $r > x_n \forall n \in \N > N$, which is equivalent to $x_n \in S_r(0) \forall n \in \N > N$.
 \end{solution}
 
-\question{Let $\{x_n:n\in\mathbb{Z}^+\}$ be the sequence in $\R$ defined by $x_n = (-1)^n(\frac{1}{n})$. Does this sequence converge? To what? Prove it.}
+\question{Let $\{x_n:n\in\Z^+\}$ be the sequence in $\R$ defined by $x_n = (-1)^n(\frac{1}{n})$. Does this sequence converge? To what? Prove it.}
 
 \begin{solution}
 It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Since $|x_n|$ converges by the previous question, so does $x_n$.
 \end{solution}
 
-\question{Let $\{x_n:n\in\mathbb{Z}^+\}$ be the sequence in $\R$ defined by $x_n = (-1)^n$. Does this sequence converge? To what? Prove it.} \label{alternatingsign}
+\question{Let $\{x_n:n\in\Z^+\}$ be the sequence in $\R$ defined by $x_n = (-1)^n$. Does this sequence converge? To what? Prove it.} \label{alternatingsign}
 
 \begin{solution}
  \\It does not converge to $a \forall a \in \R$. \\
@@ -527,9 +527,9 @@ It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Sinc
  
  \part{$[0,1]$}
  \part{$[1,\infty)$}
- \part{$\{x\in\R:x=\frac{1}{n} \text{ for }n \in \mathbb{Z}^+\}$}
-  \part{$\{x\in\R:x=\frac{1}{n} \text{ for }n \in \mathbb{Z}^+\text{, or }x=0\}$}
-  \part{$\{x\in\R:x=\frac{1}{\sqrt{n}} \text{ for } n \in \mathbb{Z}^+\}$}
+ \part{$\{x\in\R:x=\frac{1}{n} \text{ for }n \in \Z^+\}$}
+  \part{$\{x\in\R:x=\frac{1}{n} \text{ for }n \in \Z^+\text{, or }x=0\}$}
+  \part{$\{x\in\R:x=\frac{1}{\sqrt{n}} \text{ for } n \in \Z^+\}$}
   
 \end{parts}
 
@@ -537,7 +537,7 @@ It converges to 0. Note that $|x_n| \in S_r(0) \Rightarrow x_n \in S_r(0)$. Sinc
  Closed, closed, not closed, closed, not closed.
 \end{solution}
 
-\question{Is$(\R-\Q)\cap\{x\in\R:x=\frac{1}{\sqrt{n}} \text{ for } n \in \mathbb{Z}^+\}$ a closed subset of the \textit{irrationals} with the metric topology induced by the absolute value metric?}
+\question{Is$(\R-\Q)\cap\{x\in\R:x=\frac{1}{\sqrt{n}} \text{ for } n \in \Z^+\}$ a closed subset of the \textit{irrationals} with the metric topology induced by the absolute value metric?}
 
 \begin{solution}
  \\Yes. Whenever the sequence tends to an irrational point $x$, $x$ is in the set. Proof by contradiction: \\
@@ -547,7 +547,7 @@ If $0<x<1$, then $\frac{1}{\sqrt{n+1}} < x < \frac{1}{\sqrt{n}}$. Let $r = \text
 In all other cases, $x$ is either rational or in the subset itself.
 \end{solution}
 
-\question{Let $[p_n = (x_n,y_n):n \in \mathbb{Z}^+\}$ be a sequence in $E^2$, the Euclidean plane. Prove that $p_n \rightarrow p = (x,y)$ if and only if both $x_n \rightarrow x$ and $y_n \rightarrow y$. (Thus a sequence in the plane converges if and only if it converges "coordinate-wise")}
+\question{Let $[p_n = (x_n,y_n):n \in \Z^+\}$ be a sequence in $E^2$, the Euclidean plane. Prove that $p_n \rightarrow p = (x,y)$ if and only if both $x_n \rightarrow x$ and $y_n \rightarrow y$. (Thus a sequence in the plane converges if and only if it converges "coordinate-wise")}
 
 \begin{solution}
  \\$\Rightarrow$: \\
@@ -556,7 +556,7 @@ In all other cases, $x$ is either rational or in the subset itself.
  $\forall r > 0$, let $r' = \frac{r}{\sqrt{2}}$. Then $\exists N_x \in \N$ such that $n \in \N > N_x \Rightarrow x_n \in S_{r'}(x)$. A similar $N_y$ exists for $y$. Letting $N = \text{ max}\{N_x,N_y\}$ implies that $\forall n > N$, $p_n \in S_r(p)$. As this holds $\forall r > 0$, we can conclude that $p_n \rightarrow p$.
 \end{solution}
 
-\question{Prove that every real number can be written as the limit of a convergent sequence of \textit{rational} numbers, i.e., if $r \in \R$, exhibit a sequence $\{x_n:n\in\mathbb{Z}^+\} \subseteq \Q$ such that $x_n \rightarrow r$.}
+\question{Prove that every real number can be written as the limit of a convergent sequence of \textit{rational} numbers, i.e., if $r \in \R$, exhibit a sequence $\{x_n:n\in\Z^+\} \subseteq \Q$ such that $x_n \rightarrow r$.}
 
 \begin{solution}
  This can be done by extending the decimal expansion of said real number, e.g.
@@ -618,7 +618,7 @@ Letting $n =$ max$\{N'+1,N\}$, we have $x_n \in S_r(x)$ for arbitrary $r$ and $N
  For all sequences in $F$ that converge to $x$, $x$ is an accumulation point, so $x \in F$. This implies $F$ is closed by \hyperref[thm3.5.5]{Theorem 5.5}.
 \end{solution}
 
-\question{State precisely what it means when the point $x \in X$ is \textit{not} an accumulation point of the sequence $\{x_n:n\in\mathbb{Z}^+\} \subseteq X$.}
+\question{State precisely what it means when the point $x \in X$ is \textit{not} an accumulation point of the sequence $\{x_n:n\in\Z^+\} \subseteq X$.}
 
 \begin{solution}
  $\exists r \in \R > 0, N \in \N$ such that $n \geq N \Rightarrow x_n \notin S_r(x)$
@@ -663,7 +663,7 @@ which completes the proof.
 \subsection{Theorem 6.4} \label{thm3.6.4}
 \setcounter{question}{0}
 
-\question{Let $(X,d_1)$ and $(Y,d_2)$ be two metric spaces and let $f:D \subseteq X \rightarrow Y$. The $f$ is \textbf{continuous at} point $x_0 \in D$ if and only if whenever $\{x_n:n\in\mathbb{Z}^+\}$ is a sequence in $D$ that converges to $x_0$, then the sequence $\{f(x_n):n\in\mathbb{Z}^+\}$ converges to $f(x_0)$ in $Y$.}
+\question{Let $(X,d_1)$ and $(Y,d_2)$ be two metric spaces and let $f:D \subseteq X \rightarrow Y$. The $f$ is \textbf{continuous at} point $x_0 \in D$ if and only if whenever $\{x_n:n\in\Z^+\}$ is a sequence in $D$ that converges to $x_0$, then the sequence $\{f(x_n):n\in\Z^+\}$ converges to $f(x_0)$ in $Y$.}
 
 \begin{solution}
  \\$\Rightarrow$: \\
@@ -677,7 +677,7 @@ Assume $f$ is not continuous. Then $\exists x_0 \in X$ where $f$ is not continuo
 \subsection{Exercise 6.5}
 \setcounter{question}{0}
 
-\question{Let $S$ be a sequence in $\R$, and let $\mathbb{Z}^+$ have the discrete topology that it gets by saying that every point in $\mathbb{Z}^+$ is open. Prove that $S$ is continuous.}
+\question{Let $S$ be a sequence in $\R$, and let $\Z^+$ have the discrete topology that it gets by saying that every point in $\Z^+$ is open. Prove that $S$ is continuous.}
 
 \begin{solution}
  Set $\delta = 0.5$. Then $S_\delta(x) = \{x\}$, so $f(S_\delta(x)) = \{f(x)\} \in S_\epsilon(f(x)) \forall \epsilon > 0$
@@ -810,5 +810,5 @@ Note: Someone who actually knows topology should look into this.
 \question{Find out what a Möbius strip and a Klein bottle are. Do you want to add anything to your answers to Problems 1 or 3 above?}
 
 \begin{solution}
-See "list_of_skipped_questions.txt"
+See "list\_of\_skipped\_questions.txt"
 \end{solution}

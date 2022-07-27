@@ -319,3 +319,101 @@ T$_1$-space that is not a T$_2$-space: the finite-complement topology \\
  Since $U$ is a neighbourhood, $x \in U$ implies $x \in O \subseteq U$ where $O$ is some open set. This means $U$ is open by definition.
 \end{solution}
 
+\subsection{Exercise 4.5}
+\setcounter{question}{0}
+
+\question{Let $X$ be the real line with the indiscrete topology and consider the sequence $\{\frac{1}{n}: n \in \Z^+\}$. Prove that if $r$ is any point of $X$, then this sequence converges to $r$.}
+
+\begin{solution}
+ \\Let $O$ be an open set containing $r$. Since this is the indiscrete topology, $O=X$ is the only possibility. Then $\forall n > 0$, $f(n) \in O$, so the sequence converges to $r$.
+\end{solution}
+
+\question{Let $X = \R$ with the finite-complement topology. Prove that $\{\frac{1}{n}:n \in \Z^+\}$ converges to every point in the space.}
+
+\begin{solution}
+ \\Let $O$ be an open set containing $r$. Since this is the finite-complement topology, $X-O$ is finite. Let $A = \{a \in X-O|a > 0\}$. If $A$ is empty, let $N$ = 0. Or else, $A$ must have a minimum $m$ that is a positive number. Since $\frac{1}{n}$ tends to 0, $\exists N \in \N$ such that $\frac{1}{n} < m \forall n > N$. Now $\forall n > N$, $f(n) \in O$, so the sequence tends to $r$.
+\end{solution}
+
+\question{Recall that a topological space $X$ is a Hausdorff space if distinct points of $X$ are contained in disjoint open sets.}
+
+\begin{parts}
+ 
+ \part{Prove that a space is a Hausdorff space if and only if distinct points are contained in disjoint neighbourhoods.}
+ 
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Open sets are also neighbourhoods, so distinct points in the space are contained in disjoint neighbourhoods. \\
+ $\Leftarrow$: \\
+ Let the distinct points be $x$ and $y$, and the disjoint neighbourhoods $N_x$ and $N_y$. Since $N_x$ is a neighbourhoods of $x$, $x \in O_x \subseteq N_x$, and the same holds for $y$. Then $x$ and $y$ are in disjoint open sets $O_x$ and $O_y$, so the space is a Hausdorff space.
+\end{solution}
+
+\part{Prove that every metric space is a Hausdorff space.}
+
+\begin{solution}
+\\Let $x$ and $y$ be two distinct points, and let $R = d(x,y), r = \frac{R}{2}$. Consider a point $p \in S_r(x)$. Rearranging the triangle inequality,
+$$d(p,y) \geq R - d(p,x) > R - r = r$$
+so $p$ cannot be in $S_r(y)$. The same holds if $p \in S_r(y)$. This means for all distinct $x, y$, there exists disjoint open sets $S_r(x)$ and $S_r(y)$ which contain $x$ and $y$ respectively, making it a Hausdorff space.
+\end{solution}
+
+\part{Prove that in a Hausdorff space, if a sequence converges, then it converges to exactly one point. Deduced that the real line with the finite complement topology is not a Hausdorff space.}
+
+\begin{solution}
+ \\Proof by contradiction. Let the sequence converge to distinct points $x$ and $y$. Let $O_x$ and $O_y$ be a pair of disjoint open sets that contain $x$ and $y$ respectively. Since the sequence converges to $x$, $\exists N_x \in N$ such that $n > N \Rightarrow f(n) \in O_x$. There exists a similar $N_y$. Letting $N$ = max$\{N_x, N_y\}$, then $\forall n > N, x_n$ is in both $O_x$ and $O_y$ at the same time, which is a contradiction as both sets are disjoint.
+\end{solution}
+
+\end{parts}
+
+\question{Consider $X = [0, \Omega]$ with the order topology as defined in Section 4 of Chapter 3. We proved that in a metric space, a set $S$ is closed if and only if whenever a sequence of points of $S$ converges to a point $x$ in the space, then $x \in S$.}
+
+\begin{parts}
+ 
+ \part{Prove, usig the definition of closed set, that $S = [0, \Omega)$ is not a closed subset of $X = [0, \Omega]$ with the order topology.}
+ 
+\begin{solution}
+ \\If it is a closed set, then $\{\Omega\}$ must be open in the order topology, so
+ $$\exists a \in X: \Omega \in (a,\Omega] \subseteq \{\Omega\}$$
+For the interval to make sense, $a < \Omega$. Noting that $\Omega$ is a limit ordinal,
+$$a < \Omega \Rightarrow a+1 < \Omega$$
+so $a+1 \neq \Omega$ is an element of $(a, \Omega]$, which is a contradiction, since its superset $\{\Omega\}$ does not contain $a+1$.
+ \end{solution}
+ 
+ \part{Prove that if a sequence of points of $S = [0, \Omega)$ converges to a point $x \in [0, \Omega]$, then $x \in S$.}
+ 
+\begin{solution}
+\\The sequence $x_n$ cannot tend to $\Omega$ if it has a finite length, since it then as a maximum $m$, and $x_n \notin (m, \Omega] \forall n \in \N$. and If not, consider
+ $$l = \bigcap_{n \in \N} (x_n, \Omega]$$
+ Obviously $\Omega \in l$, but if $y \neq \Omega \in l$, then
+ $$y > x_n \forall n \in N \Rightarrow x_n \notin [y, \Omega] \forall n \in N$$
+ Loosely speaking, $x_n$ can never reach $y$, so it can never "enter" the open set $[y, \Omega]$. However, such a $y$ always exists by \hyperref[supp]{this}.
+\end{solution}
+
+\part{Deduce that $X = [0, \Omega]$ with the order topology is not a metric space, but}
+
+\begin{solution}
+ \\If it is a metric space, then consider
+ $$A = \bigcap_{n \in \N} S_{\frac{1}{n}}(\Omega)$$
+ By \hyperref[supp]{this}, $\exists a \in A: a \neq \Omega$. Let $d(a, \Omega) = r$. Since $\frac{1}{n}$ tends to 0, we know that $r > \frac{1}{i}$ for some $i \in \N$. Then $a \notin S_{\frac{1}{i}}(\Omega)$, so $a \notin A$, which is a contradiction.
+\end{solution}
+
+\part{Prove that $X = [0, \Omega]$ with the order topology is a Hausdorff space.}
+
+\begin{solution}
+ Let $a < b$ be two distinct points. Then $[0, a]$ and $(a, \Omega]$ are disjoint open sets that contain $a$ and $b$ respectively.
+\end{solution}
+
+\end{parts}
+
+\subsection{Theorem 4.6}
+\setcounter{question}{0}
+
+\question{Let $X$ and $Y$ be topological spaces and let $f: X \rightarrow Y$. Then the funtion $f$ is continuous at a point $x_0 \in X$ if and only if for every neighbourhood $N_2$ of $f(x_0)$ in $Y$, there is a neighbourhood $N_1$ of $x_0$ in $X$ such that $f(N_1) \subseteq N_2$.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ If $N_2$ is a neighbourhood, then $\exists$ an open $O_2 \subseteq N_2$ which contains $f(x_0)$. Since $f$ is continuous, $f^{-1}(O_2)$ is open, and acts as the desired $N_1$. \\
+ $\Leftarrow$: \\
+ Let $O_2$ be an open set containing $f(x_0)$. Then there exists a $N_1$, and $x_0 \in O_1 \subseteq N_1$ for some open $O_1$ by the definition of a neighbourhood. Since
+ $$f(O_1) \subseteq O_2$$
+ $f$ is continuous by definition.
+\end{solution}
+
