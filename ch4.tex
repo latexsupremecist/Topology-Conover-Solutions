@@ -417,3 +417,23 @@ so $a+1 \neq \Omega$ is an element of $(a, \Omega]$, which is a contradiction, s
  $f$ is continuous by definition.
 \end{solution}
 
+\section{Closed Sets and Closure}
+\subsection{Theorem 5.2}
+\setcounter{question}{0}
+
+\question{Let $X$ be a topological space. Then}
+
+\begin{enumerate}
+ \item $X$ and $\emptyset$ are closed. \\
+ \item The intersection of an arbitrary collection of closed sets is closed. \\
+ \item The union of a finite collection of closed sets is closed. \\
+\end{enumerate}
+
+\begin{solution}
+ \\Since the complements of $X$ and $\emptyset$ are each other (which are open), they are also closed. \\
+ Let $A$ be a set where $a \in A$ is closed. Then
+ $$X - \bigcap A = \bigcup_{a \in A} X-a$$
+ which is open. So the intersection of closed sets is closed. Now let $B$ be a finite set where $b \in B$ is closed. Similarly,
+ $$X - \bigcup B = \bigcap_{b \in B} X-b$$
+ which is open, so a finite union of closed subsets is closed.
+\end{solution}
