@@ -452,11 +452,11 @@ so $a+1 \neq \Omega$ is an element of $(a, \Omega]$, which is a contradiction, s
 \end{parts}
 
 \begin{solution}
- \\a: $\mathbb{D}, \mathbb{U}, \mathbb{S}$ \\
- b: $\mathbb{D}$ \\
- c: $\mathbb{D}, \mathbb{S}$ \\
- d: $\mathbb{D}$ \\
- e: $\mathbb{D}, \mathbb{U}, \mathbb{S}, \mathbb{F}$ \\
+ \\(a): $\mathbb{D}, \mathbb{U}, \mathbb{S}$ \\
+ (b): $\mathbb{D}$ \\
+ (c): $\mathbb{D}, \mathbb{S}$ \\
+ (d): $\mathbb{D}$ \\
+ (e): $\mathbb{D}, \mathbb{U}, \mathbb{S}, \mathbb{F}$ \\
 \end{solution}
 
 \question{Recall that a space is a T$_1$-space if for every pair of distinct points $x$ and $y$ in the space, there is an open set $U$ such that $x \in V$ and $y \notin U$, and there is an open set $V$ such that $y \in V$ and $x \notin V$.}
@@ -513,39 +513,186 @@ A function $f: X \rightarrow Y$ is a closed function if whenever $F$ is closed i
 \setcounter{question}{0}
 
 The closure of a set $A$ is defined as
-$$\bar{A} = \bigcap \{F:F \text{ is closed in } X \text{ and } A \subseteq F\}$$
+$$\overline{A} = \bigcap \{F:F \text{ is closed in } X \text{ and } A \subseteq F\}$$
 
 \question{Let $X$ be a topological space and let $A \subseteq X$. Then}
 
 \begin{parts}
- \part{$\bar{A}$ is a closed set.}
+ \part{$\overline{A}$ is a closed set.}
  
  
 \begin{solution}
- $\bar{A}$ is an intersection of closed sets, so it too is closed.
+ $\overline{A}$ is an intersection of closed sets, so it too is closed.
 \end{solution}
 
-\part{$A \subseteq \bar{A}$}
+\part{$A \subseteq \overline{A}$}
 
 \begin{solution}
- $x \in A \Rightarrow x \in F \forall F \iff x \in \bar{A}$
+ $x \in A \Rightarrow x \in F \forall F \iff x \in \overline{A}$
 \end{solution}
 
-\part{$\bar{A}$ is the smallest closed set that contains $A$ in the sense than if $S$ is closed and $A \subseteq S$, then $\bar{A} \subseteq S$ also.}
+\part{$\overline{A}$ is the smallest closed set that contains $A$ in the sense than if $S$ is closed and $A \subseteq S$, then $\overline{A} \subseteq S$ also.}
 
 \begin{solution}
  Such an $S$ corresponds to $F$ as stated above, so $x \in S \Rightarrow x \in S$ by definition.
 \end{solution}
 \end{parts}
 
-\subsection{Theorem 5.8}
+\subsection{Theorem 5.8} \label{thm4.5.8}
 \setcounter{question}{0}
 
-\question{Let $X$ be a topological space and let $A \subseteq X$. Then if $x \in X, x \in \bar{A}$ if and only if $N \cap A \neq \emptyset$ for all neighbourhoods $N$ of $x$.}
+\question{Let $X$ be a topological space and let $A \subseteq X$. Then if $x \in X, x \in \overline{A}$ if and only if $N \cap A \neq \emptyset$ for all neighbourhoods $N$ of $x$.}
 
 \begin{solution}
  \\$\Rightarrow$: \\
- Proof by contradiction: if there exists a neighbourhood $N$ of $x$ which is disjoint with $A$, then there exists an open set $O_x$ containing $x$ that is disjoint with $A$, and $C_x = X - O_x$ is a closed set containing $A$ that does not contain $x$. Then $x \in \bar{A} \Rightarrow x \in C_x$, which is a contradiction. \\
+ Proof by contradiction: if there exists a neighbourhood $N$ of $x$ which is disjoint with $A$, then there exists an open set $O_x$ containing $x$ that is disjoint with $A$, and $C_x = X - O_x$ is a closed set containing $A$ that does not contain $x$. Then $x \in \overline{A} \Rightarrow x \in C_x$, which is a contradiction. \\
  $\Leftarrow$: \\
- Proof by contradiction: let $x \notin \bar{A}$. Then there exists a closed set $C_x \in X$ that contains $A$ but not $x$. Then $O_x = X - C_x$ is an open set containing $x$ that is disjoint with $A$. Since all open sets are neighbourhoods, this means there exists a neighbourhood of $x$ that is disjoint with $A$, which contradicts the assumption.
+ Proof by contradiction: let $x \notin \overline{A}$. Then there exists a closed set $C_x \in X$ that contains $A$ but not $x$. Then $O_x = X - C_x$ is an open set containing $x$ that is disjoint with $A$. Since all open sets are neighbourhoods, this means there exists a neighbourhood of $x$ that is disjoint with $A$, which contradicts the assumption.
 \end{solution}
+
+\subsection{Exercise 5.9}
+\setcounter{question}{0}
+
+\question{In the spaces on the real line obtained by giving it the indiscrete topology, the discrete topology, the usual metric topology, the Sorgenfrey topology, and the finite-complement topology, what is $\overline{A}$ if $A$ is}
+
+\begin{parts}
+ \part{$(0,1)$.}
+ 
+\begin{solution}
+ \\$\mathbb{I}: \R$ \\
+ $\mathbb{D}: (0,1)$ \\
+ $\mathbb{U}: [0,1]$ \\
+ $\mathbb{S}: [0,1)$ \\
+ $\mathbb{F}: \R$ \\
+\end{solution}
+
+ \part{$[0,1]$.}
+ 
+ \begin{solution}
+ \\$\mathbb{I}: \R$ \\
+ $\mathbb{D}: [0,1]$ \\
+ $\mathbb{U}: [0,1]$ \\
+ $\mathbb{S}: [0,1]$ \\
+ $\mathbb{F}: \R$ \\
+\end{solution}
+
+ \part{$[0,1)$.}
+ 
+ \begin{solution}
+ \\$\mathbb{I}: \R$ \\
+ $\mathbb{D}: [0,1)$ \\
+ $\mathbb{U}: [0,1]$ \\
+ $\mathbb{S}: [0,1)$ \\
+ $\mathbb{F}: \R$ \\
+\end{solution}
+
+ \part{$(0,1]$.}
+ 
+ \begin{solution}
+ \\$\mathbb{I}: \R$ \\
+ $\mathbb{D}: (0,1]$ \\
+ $\mathbb{U}: [0,1]$ \\
+ $\mathbb{S}: [0,1]$ \\
+ $\mathbb{F}: \R$ \\
+\end{solution}
+
+ \part{$\{0\}$.}
+ 
+ \begin{solution}
+ \\$\mathbb{I}: \R$ \\
+ $\mathbb{D}: \{0\}$ \\
+ $\mathbb{U}: \{0\}$ \\
+ $\mathbb{S}: \{0\}$ \\
+ $\mathbb{F}: \{0\}$ \\
+\end{solution}
+
+ \part{$\Q$}
+ 
+  \begin{solution}
+ \\$\mathbb{I}: \R$ \\
+ $\mathbb{D}: \Q$ \\
+ $\mathbb{U}: \R$ \\
+ $\mathbb{S}: \R$ \\
+ $\mathbb{F}: \R$ \\
+\end{solution}
+
+ \part{$\{\frac{1}{n}:n \in \Z^+\}$}
+ 
+  \begin{solution}
+ \\$\mathbb{I}: \R$ \\
+ $\mathbb{D}: \{\frac{1}{n}:n \in \Z^+\}$ \\
+ $\mathbb{U}: \{\frac{1}{n}:n \in \Z^+\} \cup \{0\}$ \\
+ $\mathbb{S}: \{\frac{1}{n}:n \in \Z^+\} \cup \{0\}$ \\
+ $\mathbb{F}: \R$ \\
+\end{solution}
+
+ \part{$\emptyset$}
+ 
+   \begin{solution}
+ \\$\mathbb{I}: \emptyset$ \\
+ $\mathbb{D}: \emptyset$ \\
+ $\mathbb{U}: \emptyset$ \\
+ $\mathbb{S}: \emptyset$ \\
+ $\mathbb{F}: \emptyset$ \\
+\end{solution}
+
+\end{parts}
+
+\question{Instead of giving you a specific problem, this exercise asks you to formulate the problem and then to solve them.}
+
+\begin{parts}
+ \part{How does closure behave with respect to unions?}
+ 
+ 
+\begin{solution}
+  \\A finite union of closures is equal to a closure of finite unions, or
+ $$\overline{\bigcup_{i \in I} A_i} = \bigcup_{i \in I} \overline{A_i}$$
+ where $I$ is finite. \\
+ LHS $\subseteq$ RHS: \\
+ Proof by contradiction. Let $x \in$ LHS but $x \notin$ RHS. Let $O_i$ be an open set containing $x$ but disjoint with $A_i$. Then $\bigcap_{i \in I} O_i$ is open, contains $x$, but disjoint with $\bigcup_{i \in I} A_i$, meaning $x \notin$ LHS, which is a contradiction. \\
+ RHS $\subseteq$ LHS: \\
+ Let $x \in RHS$, and $N$ be an arbitrary neighbourhood of $x$. Then $N \cup \bigcup_{i \in } A_i$ is nonempty, so $x \in LHS$. This also shows that RHS $\subseteq$ LHS even when $I$ is not finite.
+\end{solution}
+
+ \part{How does closure behave with respect to intersections?}
+ 
+\begin{solution}
+ \\A closure of intersections is a subset of an intersection of closures, or
+ $$\overline{\bigcap_{i \in I} A_i} \subseteq \bigcap_{i \in I} \overline{A_i}$$
+ $x \in$ LHS means than for an arbitrary neighbourhood $N$ of $x$, $N \cap \bigcap_{i \in I} A_i$ is not empty. Therefore $N \cap A_i \forall i \in I$ is non empty, so $x \in \overline{A_i} \forall i \in I$, equivalent to saying $x \in \bigcap_{i \in I} \overline{A_i}$. \\
+ LHS does not have to equal RHS, as seen in $\{x \in \R| x < 0\}$ and $\{x \in \R| x > 0\}$ in the space $\R$.
+\end{solution}
+ \part{How does closure behave with respect to complementation?}
+  
+\begin{solution}
+ \\The complement of the closure is a subset of the closure of the complement, or
+ $$X - \overline{A} \subseteq \overline{X - A}$$
+ $x \in$ LHS $\Rightarrow x \in X - A \Rightarrow x \in \overline{X - A}$ \\
+ LHS does not have to equal RHS, as seen in $A = \{x \in \R| x < 0\}$.
+\end{solution}
+
+ \part{How does closure behave with respect to Cartesian products?}
+ 
+ 
+\begin{solution}
+\\Let $A_i$ be a finite collection of sets with metrices $d_i$. Then
+$$ \prod_{i \in I} \overline{A_i} = \overline{\prod_{i \in I} A_i}$$
+If the metric for the cartesian products is defined as
+$$d(\textbf{x}, \textbf{y}) = \sqrt{\sum_{i \in I}d_i^2(x_i, y_i)}$$
+First note that "neighbourhoods" can be replaced by "open sets" in \hyperref[thm4.5.8]{Theorem 5.8}. Also, an open hypercube can replace an open sphere in defining open sets under the usual topology. \\
+LHS $\subseteq$ RHS: \\
+Let $x \in$ LHS, and $C_x$ be an open hypercube centred at $x$ with length $2l$. Since $x \in$ LHS, we know any open set containing $x$ intersects $A_i$, meaning $\exists y_i \in S_l(x_i) \cap A_i$. There exists a point $y$ in the open cube $C_x$ whose $i$th component is in $\overline{A_i}$. Therefore, for an arbitrary $x$ in LHS and an arbitrary open set containing it, the open set also intersects with $\prod_{i \in I} A_i$, meaning $x \in$ RHS. \\
+RHS $\subseteq$ LHS: \\
+Let $x \in$ RHS, and $S_l(x_i)$ be an arbitrary open interval containing $x_i$. Consider an open hypercube $C_x$ centred at $x$ with length $2l$. Since RHS is a closure, this cube contains $y \in \prod_{i \in I} A_i$, meaning $y_i \in S_l(x_i) \cap A_i$. Since an arbitrary open set containing $x_i$ intersects $A_i$, we have $x_i \in \overline{A_i} \forall i \in I$.
+\end{solution}
+
+ \part{How do functions affect closure?}
+ 
+ 
+\begin{solution}
+ \\For a continuous function, the function of the closure is a subset of the closure of the function, or
+ $$f(\overline{A}) \subseteq \overline{f(A)}$$
+ Let $f: X \rightarrow Y$, and $y \in$ LHS. Then $\exists x \in \overline{A}: f(x) = y$. Let $O_y$ be an arbitrary open set in $Y$ containing $y$. Then $O_x = f^{-1}(O_y)$ is an open set containing $x$. Since $x \in$ LHS, $O_x$ must contain an $a \in A$, so $f(a) \in O_y$, meaning $O_y$ intersects $f(A)$. Since this holds $\forall O_y$, $y \in \overline{f(A)}$. \\
+ LHS does not have to equal RHS, e.g. when $f(x) = x, X = (\R, \mathbb{U}), Y = (\R, \mathbb{I})$.
+\end{solution}
+\end{parts}
