@@ -537,3 +537,15 @@ $$\bar{A} = \bigcap \{F:F \text{ is closed in } X \text{ and } A \subseteq F\}$$
  Such an $S$ corresponds to $F$ as stated above, so $x \in S \Rightarrow x \in S$ by definition.
 \end{solution}
 \end{parts}
+
+\subsection{Theorem 5.8}
+\setcounter{question}{0}
+
+\question{Let $X$ be a topological space and let $A \subseteq X$. Then if $x \in X, x \in \bar{A}$ if and only if $N \cap A \neq \emptyset$ for all neighbourhoods $N$ of $x$.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Proof by contradiction: if there exists a neighbourhood $N$ of $x$ which is disjoint with $A$, then there exists an open set $O_x$ containing $x$ that is disjoint with $A$, and $C_x = X - O_x$ is a closed set containing $A$ that does not contain $x$. Then $x \in \bar{A} \Rightarrow x \in C_x$, which is a contradiction. \\
+ $\Leftarrow$: \\
+ Proof by contradiction: let $x \notin \bar{A}$. Then there exists a closed set $C_x \in X$ that contains $A$ but not $x$. Then $O_x = X - C_x$ is an open set containing $x$ that is disjoint with $A$. Since all open sets are neighbourhoods, this means there exists a neighbourhood of $x$ that is disjoint with $A$, which contradicts the assumption.
+\end{solution}
