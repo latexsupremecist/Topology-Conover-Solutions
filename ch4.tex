@@ -508,3 +508,32 @@ A function $f: X \rightarrow Y$ is a closed function if whenever $F$ is closed i
 \begin{solution}
  $f(r) = r$ from $(\R, \mathbb{U})$ to $(\R, \mathbb{I})$ is a continuous function that is not closed.
 \end{solution}
+
+\subsection{Theorem 5.7}
+\setcounter{question}{0}
+
+The closure of a set $A$ is defined as
+$$\bar{A} = \bigcap \{F:F \text{ is closed in } X \text{ and } A \subseteq F\}$$
+
+\question{Let $X$ be a topological space and let $A \subseteq X$. Then}
+
+\begin{parts}
+ \part{$\bar{A}$ is a closed set.}
+ 
+ 
+\begin{solution}
+ $\bar{A}$ is an intersection of closed sets, so it too is closed.
+\end{solution}
+
+\part{$A \subseteq \bar{A}$}
+
+\begin{solution}
+ $x \in A \Rightarrow x \in F \forall F \iff x \in \bar{A}$
+\end{solution}
+
+\part{$\bar{A}$ is the smallest closed set that contains $A$ in the sense than if $S$ is closed and $A \subseteq S$, then $\bar{A} \subseteq S$ also.}
+
+\begin{solution}
+ Such an $S$ corresponds to $F$ as stated above, so $x \in S \Rightarrow x \in S$ by definition.
+\end{solution}
+\end{parts}
