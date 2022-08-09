@@ -437,3 +437,74 @@ so $a+1 \neq \Omega$ is an element of $(a, \Omega]$, which is a contradiction, s
  $$X - \bigcup B = \bigcap_{b \in B} X-b$$
  which is open, so a finite union of closed subsets is closed.
 \end{solution}
+
+\subsection{Exercise 5.3}
+\setcounter{question}{0}
+
+\question{Consider again the spaces $(\R, \mathbb{I}), (\R, \mathbb{D}), (\R, \mathbb{U}), (\R, \mathbb{S}), (\R, \mathbb{F})$. In which of these spaces is:}
+
+\begin{parts}
+ \part{$[0,1]$ closed?}
+ \part{$(0,1)$ closed?}
+ \part{$[0,1)$ closed?}
+ \part{$(0,1]$ closed?}
+ \part{$\{0\}$ closed?}
+\end{parts}
+
+\begin{solution}
+ \\a: $\mathbb{D}, \mathbb{U}, \mathbb{S}$ \\
+ b: $\mathbb{D}$ \\
+ c: $\mathbb{D}, \mathbb{S}$ \\
+ d: $\mathbb{D}$ \\
+ e: $\mathbb{D}, \mathbb{U}, \mathbb{S}, \mathbb{F}$ \\
+\end{solution}
+
+\question{Recall that a space is a T$_1$-space if for every pair of distinct points $x$ and $y$ in the space, there is an open set $U$ such that $x \in V$ and $y \notin U$, and there is an open set $V$ such that $y \in V$ and $x \notin V$.}
+
+\begin{parts}
+ \part{Restate the definition of a T$_1$-space in terms of neighbourhoods.}
+ 
+ 
+\begin{solution}
+ A space is a T$_1$-space if and only if for every distinct $x, y$ pair, there exists a neighbourhood of $x$ that does not contain $y$, and there exists a neighbourhood of $y$ that does not contain $x$.
+\end{solution}
+
+\part{Prove that a space is a T$_1$-space if and only if for each point $p$ in the space, the singleton set $\{p\}$ is a closed set.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Let the space be $X$. $\forall q \neq p$, let $O_q$ be an open set that contains $q$ but not $p$. Such a set always exists because the space is T$_1$. Therefore $\bigcup_{q \neq p \in X} O_q = X - \{p\}$ is open, so the singleton set $\{p\}$ is closed. \\
+ $\Leftarrow$: \\
+ Let the space be $X$, and $x, y$ be a pair of distinct points. Then $X - \{x\}$ and $X - \{y\}$ are open sets which contain exactly one of $x, y$ respectively.
+\end{solution}
+\end{parts}
+
+\subsection{Theorem 5.4}
+\setcounter{question}{0}
+
+\question{Let $X$ and $Y$ be topological spaces and let $f: X \rightarrow Y$. Then $f$ is continuous (on $X$) if whenever $F$ is a closed set in $Y$, then $f^{-1}(F)$ is closed in $X$.}
+
+\begin{solution}
+ \\Since open sets and closed sets are complements, $f^{-1}$ preserving closed sets it equivalent to it preserving open sets. \\
+ $\Rightarrow$: \\
+ Let $F$ be an closed set in $Y$. Let $G = Y - F$, where $G$ is open. Since $f$ is continuous, $f^{-1}(G)$ is also open. Then $f^{-1}(F) = X - f^{-1}(G)$ is closed. \\
+ $\Leftarrow$: \\
+ Let $G$ be an open set in $Y$. Let $F = Y - G$, where $F$ is closed. Since $f^{-1}(F)$ is closed, $f^{-1}(G) = X - f^{-1}(F)$ is open. \\
+\end{solution}
+
+\subsection{Exercise 5.5}
+\setcounter{question}{0}
+
+A function $f: X \rightarrow Y$ is a closed function if whenever $F$ is closed in $X$ then $f(F)$ is closed in $Y$.
+
+\question{Give an example of a closed function that is not continuous.}
+
+\begin{solution}
+ $f(r) = r$ from $(\R, \mathbb{U})$ to $(\R, \mathbb{D})$ is a closed function that is not continuous.
+\end{solution}
+
+\question{Give an example of a continuous function that is not closed.}
+
+\begin{solution}
+ $f(r) = r$ from $(\R, \mathbb{U})$ to $(\R, \mathbb{I})$ is a continuous function that is not closed.
+\end{solution}
