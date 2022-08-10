@@ -729,3 +729,71 @@ Let $x \in$ RHS, and $S_l(x_i)$ be an arbitrary open interval containing $x_i$. 
 Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i.e. it is closed. Since the inverse of any closed set is closed, $f$ is continuous.
 \end{solution}
 \end{parts}
+
+\subsection{Exercise 5.11}
+\setcounter{question}{0}
+
+\question{Show that, fora subset $A$ of a topological space, $A = \overline{A}$ if and only if $A$ is closed.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Let $A$ be closed. Then $A$ is the smallest closed set that contains $A$ itself, so it is its own closure. \\
+ $\Leftarrow$: \\
+ $\overline{A}$ is closed by definition. If $A$ is not closed, $A = \overline{A}$ becomes a contradiction.
+\end{solution}
+
+\question{$x \in X$ is a cluster point of $A \subseteq X$ if every neighbourhood of $x$ meets $A$ in at least one point other than $x$ itself. The set of all cluster points of $A$ is called the derived set of $A$ and is denoted $A'$.}
+
+\begin{parts}
+ \part{Let $\R$ have its usual topology, $a, b \in \R$ with $a < b$. What is $(a, b)'$? $[a, b)'$? $[a, b]'$? $\{a\}'$?}
+ 
+\begin{solution}
+ $[a,b], [a,b], [a,b], \{a\}$
+\end{solution}
+
+\part{Show that if $X$ is any topological space, then $\overline{A} = A \cup A'$. Is $A' = \overline{A} - A$?}
+
+\begin{solution}
+ Proof for $\overline{A} = A \cup A'$ \\
+ LHS $\subseteq$ RHS \\
+ Let $x \in$ LHS. Either $x \in A$, or any neighbourhood of $x$ intersects $A$ at a point other than $x$, since $x \notin A$. Hence $x \in A$ or $x \in A'$. \\
+ RHS $\subseteq$ LHS \\
+ Let $x \in$ RHS. If $x \in A$, the $x \in$ LHS by definition. Or else, any neighbourhood of $x$ intersects with $A$, meaning $x \in \overline{A}$. \\
+ $A' = \overline{A} - A$ is false. Consider the usual topology where $A = [0,1]$.
+\end{solution}
+
+\part{Let $X = \{a, b, c, d\}$ with the topology $\mathcal{J} = \{\emptyset, X, \{a\}, \{a,b\}, \{c, d\}, \{a, c, d\}\}$. What are $\{p\}'$ and $\overline{\{p\}}$ when $p = a,b,c$, or $d$? What is $\{a,d\}'$? $\overline{\{a,d\}}$? What is $\{b,d\}'$? $\overline{\{b,d\}}$?}
+
+\begin{solution}
+ \\$p = a$: $\{b\}, \{a, b\}$ \\
+ $p = b$: $\emptyset, \{b\}$ \\
+ $p = c$: $\{d\}, \{c,d\}$ \\
+ $p = d$: $\{c\}, \{c,d\}$ \\
+ $\{a,d\}' = \{b, c\}, \overline{\{a,d\}} = X, \{b,d\}' = \{c\}, \overline{\{b,d\}} = \{b,c,d\}$
+\end{solution}
+\end{parts}
+
+\question{The largest open set that is contained in a subset $A$ of a topolotical space $X$ is called the interior of $A$, is denoted by $A^\circ$, and is defined by $$A^\circ = \bigcup \{U \subseteq X: U \text{ is open and } U \subseteq A\}$$}
+
+\begin{parts}
+ \part{Show that $A^\circ$ is open.}
+ 
+\begin{solution}
+ $A^\circ$ is open because it is a union of open sets.
+\end{solution}
+
+\part{Show that $A^\circ$ is the largest open set contained in $A$ by showing that $A^\circ \subseteq A$ and if $U \subseteq X$ is open and $U \subseteq A$, then $U \subseteq A^\circ$.}
+
+\begin{solution}
+ $A^\circ \subseteq A$ because $x \in A^\circ \Rightarrow x \in U \subseteq A \Rightarrow x \in A$ For the second part of the question, note that the $U$ defined is exactly the $U$ whose union forms $A^\circ$, so $U \subseteq A^\circ$. \\
+\end{solution}
+
+\part{Show that $A = A^\circ$ if and only if $A$ is open.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Since $A^\circ$ is always open, $A = A^\circ$ implies $A$ is open also. \\
+ $\Leftarrow$: \\
+ We have proven that $A^\circ \subseteq A$. Since $A$ itself satisfies the definition of $U$, $A$ is part of the union that forms $A^\circ$, hence $A \subseteq A^\circ$. As both sets are subsets or each other, they are equal by definition.
+\end{solution}
+\end{parts}
