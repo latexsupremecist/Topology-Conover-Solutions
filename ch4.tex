@@ -686,7 +686,7 @@ RHS $\subseteq$ LHS: \\
 Let $x \in$ RHS, and $S_l(x_i)$ be an arbitrary open interval containing $x_i$. Consider an open hypercube $C_x$ centred at $x$ with length $2l$. Since RHS is a closure, this cube contains $y \in \prod_{i \in I} A_i$, meaning $y_i \in S_l(x_i) \cap A_i$. Since an arbitrary open set containing $x_i$ intersects $A_i$, we have $x_i \in \overline{A_i} \forall i \in I$.
 \end{solution}
 
- \part{How do functions affect closure?}
+ \part{How do functions affect closure?} \label{supp4.5.10}
  
  
 \begin{solution}
@@ -694,5 +694,38 @@ Let $x \in$ RHS, and $S_l(x_i)$ be an arbitrary open interval containing $x_i$. 
  $$f(\overline{A}) \subseteq \overline{f(A)}$$
  Let $f: X \rightarrow Y$, and $y \in$ LHS. Then $\exists x \in \overline{A}: f(x) = y$. Let $O_y$ be an arbitrary open set in $Y$ containing $y$. Then $O_x = f^{-1}(O_y)$ is an open set containing $x$. Since $x \in$ LHS, $O_x$ must contain an $a \in A$, so $f(a) \in O_y$, meaning $O_y$ intersects $f(A)$. Since this holds $\forall O_y$, $y \in \overline{f(A)}$. \\
  LHS does not have to equal RHS, e.g. when $f(x) = x, X = (\R, \mathbb{U}), Y = (\R, \mathbb{I})$.
+\end{solution}
+\end{parts}
+
+\subsection{Theorem 5.10}
+\setcounter{question}{0}
+
+\question{Let $X$ and $Y$ be topological spaces and let $f: X \rightarrow Y$. Then}
+
+\begin{parts}
+ \part{$f$ is continuous if and only if whenever $A \subseteq X$, then $f(\overline{A}) \subseteq \overline{f(A)}$}
+ 
+\begin{solution}
+ \\$\Rightarrow$: \\
+ See \hyperref[supp4.5.10]{here}. \\
+ $\Leftarrow$: \\
+ Let $B$ be a closed set in $Y$, and let $A = f^{-1}(B)$. Since $B$ is closed, we have
+ $$f(\overline{A}) \subseteq \overline{f(A)} \subseteq B$$
+ This means
+ $$x \in \overline{A} \Rightarrow f(x) \in B \Rightarrow x \in A$$
+ by definition of $A$. Combining this with the fact that $A$ is a subset of $\overline{A}$, we can conclude $A = \overline{A}$, which means $A$ is closed. Under $f$, the inverse of any closed set is still closed, so it is continuous.
+\end{solution}
+
+\part{$f$ is continuous if and only if whenever $B \subseteq Y$, then $\overline{f^{-1}(B)} \subseteq f^{-1}(\overline{B})$}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Let $x \in \overline{f^{-1}(B)}$. Consider an open set $O_y \subseteq Y$ containing $y = f(x)$. Since $f$ is continuous, $O_x = f^{-1}(O_y)$ is open. $O_x$ is an open set that contains $x$, so $\exists b \in O_x:f(b) \in B$. Then $O_y$ intersects $B$. Since $O_y$ is arbitrary, any open set containing $y$ intersects $B$, so $y \in \overline{B}$. Hence $x \in f^{-1}(\overline{B})$. \\
+ $\Leftarrow$: \\
+ Let $B$ be a closed set in $Y$. Then
+ $$\overline{f^{-1}(B)} \subseteq f^{-1}(\overline{B}) = f^{-1}(B)$$
+ so
+ $$x \in \overline{f^{-1}(B)} \Rightarrow f(x) \in B \Rightarrow x \in f^{-1}(B)$$
+Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i.e. it is closed. Since the inverse of any closed set is closed, $f$ is continuous.
 \end{solution}
 \end{parts}
