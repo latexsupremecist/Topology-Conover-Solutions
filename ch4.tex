@@ -798,7 +798,9 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
 \end{solution}
 \end{parts}
 
-\subsection{Theorem 6.1}
+\section{Basis for a Topology}
+
+\subsection{Theorem 6.1} \label{thm4.6.1}
 \setcounter{question}{0}
 
 \question{A subset of the real line with the usual topology is open if and only if it is the union of a collection of open intervals.}
@@ -813,4 +815,78 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
 \end{solution}
 
 \subsection{Theorem 6.2}
+\setcounter{question}{0}
 
+\question{A subset of a metric space $(X,d)$ is open if and only if it is the union of a collection of $r$-balls.}
+
+\begin{solution}
+ Replace "interval" with "ball" in \hyperref[thm4.6.1]{Theorem 6.1}.
+\end{solution}
+
+\subsection{Exercise 6.4}
+\setcounter{question}{0}
+
+\question{Give a basis for $\R$ when it has the}
+
+\begin{parts}
+ \part{usual metric topology}
+ \part{the indiscrete topology}
+ \part{the discrete topology}
+ \part{the Sorgenfrey topology}
+ \part{the finite-complement topology}
+\end{parts}
+
+\begin{solution}
+ \\(a): $\mathcal{B} = \{(r-\epsilon, r+\epsilon)|r \in \R, \epsilon \in \R^+\}$ \\
+ (b): $\mathcal{B} = \{\R\}$ \\
+ (c): $\mathcal{B} = \{\{r\}|r \in \R\}$ \\
+ (d): $\mathcal{B} = \{[r, r+\epsilon)|r \in \R, \epsilon \in \R^+\}$ \\
+ (e): $\mathcal{B} = \{O| \R-O \text{ is odd}\}$
+\end{solution}
+
+\question{}
+
+\begin{parts}
+ \part{What is a basis for the order topology on $\Z^+$? On $\R$?}
+ 
+\begin{solution}
+ $\{\{n\}|n \in \Z^+\}, \{(r-\epsilon, r+\epsilon)|r \in \R, \epsilon \in \R^+\}$
+\end{solution}
+
+\part{What is a basis for the order topology on $[0, \Omega)$?}
+
+\begin{solution}
+ $\{(a,b)| a < b \text{ and } a,b \in \Omega\} \cup \{0\}$
+\end{solution}
+
+\part{Answer all three questions in (a) and (b) by giving a basis for the order topology on an arbitrary totally ordered set $X$.}
+
+\begin{solution}
+\\ If $X$ has no maximum nor minimum, the basis is $\mathcal{B} = \{(a,b)| a < b \text{ and } a,b \in X\}$. If $X$ has a maximum $M$ and/or minimum $m$, the basis is the union between $\mathcal{B}$ and $\{(a, M]| a \neq M \in X\}$ and/or $\{[m, b)| b \neq m \in X\}$.
+\end{solution}
+\end{parts}
+
+\question{A given topology may have more than one basis.}
+
+\begin{parts}
+ \part{Show that the collection of open squares is a basis for the usual metric topology on the plane.}
+ 
+\begin{solution}
+ \\In fact, this can be proven for all $\R^n$. Firstly, all open squares are open. For any $x$ in an open square $O_s$, let $r$ be the minimum distance between $x$ and any of the bounds of the square. Then $x \in S_r{x} \subseteq O_s$. Secondly, the union of open squares produce all open sets. Let the centre of the square be $x$, and the side length $l$. Denote the open square by $S'_l(x)$. Given the dimensions, $\exists k \in \R$ such that the distance from $x$ to any corner is $kl$. Then all open spheres contain open squares, namely $S'_{\frac{r}{k}}(x) \subseteq S_r(x)$. Similarly, all open squares contain open spheres, namely $S_{\frac{l}{2}}(x) \subseteq S'_l(x)$. Define functions $f(S_r(x)) = S'_{\frac{r}{k}}(x)$ and $g(S'_l(x)) = S_{\frac{l}{2}}(x)$. Any open set $O = \bigcup_{x \in O} O_x$ defined using open spheres can be rewritten as $\bigcup_{x \in O} f(O_x)$. Similarly, if the same open set is defined using open squares $O_x$, it can be rewritten as $\bigcup_{x \in O} g(O_x)$. Therefore, the topology defined by both open squares and open spheres are the same.
+ \end{solution}
+ 
+ \part{Can you think of any other basis for the usual metric topology on the plane?}
+ 
+\begin{solution}
+ Open equilateral triangles.
+\end{solution}
+\end{parts}
+
+\subsection{Theorem 6.5}
+\setcounter{question}{0}
+
+\question{Let $(X,d)$ be a metric space. Then the collection $\mathcal{B} = \{S_{\frac{1}{n}}(x):n \in \Z^+ \text{ and } x \in X\}$ is a basis for the metric topology on $(X,d)$.}
+
+\begin{solution}
+ \\$\frac{1}{n}$ tends to 0, so $\forall x > 0 \exists n \in \N: x > \frac{1}{n}$. This can be written as a function, where $f(x) = n$ where if $x$ is positive, the inverse of $n$ is smaller than $x$. Now define $g(S_r(x)) = S_{f(r)}(x)$. If $O$ is an open set, it can be written as $\bigcup_{x \in O} O_x$ where $O_x$ are open spheres centred at $x$. The same set can be rewritten as $\bigcup_{x \in O} g(O_x)$. Any union of open sets in $\mathcal{B}$ is obviously open, while any open set has shown to be a union of open sets in $\mathcal{B}$, thus the collection is a basis.
+\end{solution}
