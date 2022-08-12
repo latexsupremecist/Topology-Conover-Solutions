@@ -902,3 +902,34 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
  $\Leftarrow$: \\
  First we prove $G = X - F$ is open by contradiction. If it is not open, then $\exists g \in G$ where every open set containing $g$ is not contained in $G$. Let $B_n$ be an enumeration of the local basis, and define $O_n = \bigcap_{i=1}^n B_i$. Since $O_n$ is a finite intersection of open sets containing $g$, $O_n$ itself is also an open set that contains $g$, so it is not contained in $G$, i.e. $O_n - G \neq \emptyset$. Define a sequence $x_n$ where $x_i \in O_i - G$. For any open set $O$ containing $g$, it is a superset of $B_k$ for some $k \in \N$. Then for $n > k, x_n \in O_n - G \subset O_n \subseteq B_k \subseteq O$. Since this holds for all open $O$ containing $g$, the sequence $x_n$ tends to $g$. However, $x_n$ is a sequence in $F$ that tends to $g \notin F$, which leads to a contradiction. Hence $G$ must be open, and $F$ is closed.
 \end{solution}
+
+\subsection{Exercise 6.9} %nice
+\setcounter{question}{0}
+
+\question{Give an example of a topological space which is not 1$^{\text{st}}$ countable.}
+
+\begin{solution}
+ \\The finite-complement topology on $\R$. This can be proven by contradiction. Let $x$ be the point, and $A_n$ the enumeration of its local basis. $\R - A_n$ is then finite, and $A = \bigcup_{n \in \N} R - A_n$ is at most countable. Since $\R$ is uncountable, $\R - A$ is uncountable, meaning it contains more than 1 element, ie $y \neq x \in \R$. But $\R - A = \bigcap_{n \in \N} A_n$, which means $y \in A_n \forall n \in \N$. Then none of $A_n$ can be the subset of the open set $\R - \{y\}$, leading to a contradiction.
+\end{solution}
+
+\question{Let $(X, \mathcal{J})$ be a topological space and let $\mathcal{B}_x$ be a local basis at $x \in X$. Can $\bigcap \mathcal{B}_x = \{x\}$? Must $\bigcap \mathcal{B}_x = \{x\}$?}
+
+\begin{solution}
+ It can be true, e.g. for $\mathcal{J} = \mathcal{D}$, the discrete topology. It doesn't have to be true, e.g. for $\mathcal{J} = \mathcal{I}$, the indiscrete topology.
+\end{solution}
+
+\question{}
+
+\begin{parts}
+ \part{Let $(X, \mathcal{J})$ be a topological space and, for each point $x \in X$, let $\mathcal{B}_x$ be a local basis at $x$. Show that $\mathcal{B} = \bigcup \{\mathcal{B}_x:x \in X\}$ is a basis for teh topology on $X$.}
+ 
+\begin{solution}
+\\ Let $O$ be an open set. Let $f$ be defined on $O$ such that $f(x)$ maps to an open subset of $O$ containing $x$. This is possible as all points have a local basis. Then $O = \bigcup_{x \in O} f(x)$. All open sets in $\mathcal{J}$ can be written as unions of some sets in $\mathcal{B}$, and all sets in it are obviously open in $\mathcal{J}$. Therefore it is a basis for $\mathcal{J}$.
+ \end{solution}
+ 
+ \part{Let $(X, \mathcal{J})$ be a topological space and let $\mathcal{B}$ be a basis for $\mathcal{J}$. Show that for each point $x \in X$, the collection $$\mathcal{B}_x = \{B \in \mathcal{B}: x \in B\}$$ is a local basis at $x$.}
+ 
+\begin{solution}
+ \\Obviously all sets in $\mathcal{B}_x$ are open sets containing $x$. Let $O_x$ be an open set containing $x$. Since it is open, it is a union of sets in $\mathcal{B}$, one of which must contain $x$. Denote that set by $B_x$. $B_x \in \mathcal{B}_x$ since it is an open set containing $x$. Then $B_x$ is a set in the local basis that is also a subset of $O_x$. Hence $\mathcal{B}_x$ is a local basis.
+\end{solution}
+ \end{parts}
