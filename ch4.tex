@@ -890,3 +890,15 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
 \begin{solution}
  \\$\frac{1}{n}$ tends to 0, so $\forall x > 0 \exists n \in \N: x > \frac{1}{n}$. This can be written as a function, where $f(x) = n$ where if $x$ is positive, the inverse of $n$ is smaller than $x$. Now define $g(S_r(x)) = S_{f(r)}(x)$. If $O$ is an open set, it can be written as $\bigcup_{x \in O} O_x$ where $O_x$ are open spheres centred at $x$. The same set can be rewritten as $\bigcup_{x \in O} g(O_x)$. Any union of open sets in $\mathcal{B}$ is obviously open, while any open set has shown to be a union of open sets in $\mathcal{B}$, thus the collection is a basis.
 \end{solution}
+
+\subsection{Theorem 6.8}
+\setcounter{question}{0}
+
+\question{Let $X$ be a 1$^{\text{st}}$ countable topological space. Then a subset $F \subseteq X$ is closed if and only if whenever $\{x_n:n \in \Z^+\}$ is a sequence of points of $F$ that converges to $x \in X$, then $x \in F$.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Proof by contradiction: let there be a sequence $x_n$ that converges to $x \in G = X - F$, which is open. For the sequence to converge to $x$, it must enter any open set containing $x$, e.g. $G$. This is false, leading to a contradiction. \\
+ $\Leftarrow$: \\
+ First we prove $G = X - F$ is open by contradiction. If it is not open, then $\exists g \in G$ where every open set containing $g$ is not contained in $G$. Let $B_n$ be an enumeration of the local basis, and define $O_n = \bigcap_{i=1}^n B_i$. Since $O_n$ is a finite intersection of open sets containing $g$, $O_n$ itself is also an open set that contains $g$, so it is not contained in $G$, i.e. $O_n - G \neq \emptyset$. Define a sequence $x_n$ where $x_i \in O_i - G$. For any open set $O$ containing $g$, it is a superset of $B_k$ for some $k \in \N$. Then for $n > k, x_n \in O_n - G \subset O_n \subseteq B_k \subseteq O$. Since this holds for all open $O$ containing $g$, the sequence $x_n$ tends to $g$. However, $x_n$ is a sequence in $F$ that tends to $g \notin F$, which leads to a contradiction. Hence $G$ must be open, and $F$ is closed.
+\end{solution}
