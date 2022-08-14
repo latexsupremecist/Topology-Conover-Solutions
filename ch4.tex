@@ -954,8 +954,21 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
 \begin{parts}
  \part{Describe a basis for this topology.}
  \part{Give an example of a continuous function $f:\R \rightarrow \R^+ \cup \{0\}$ such that there is a basic open set in $\R^+ \cup \{0\}$ whose inverse is not a basic open set in $\R$.}
+ \end{parts}
  
 \begin{solution}
  $\{(a,b)|a,b \in \R^+ \cup \{0\} \text{ and } a < b\}$, $f(x) = x^2$
 \end{solution}
-\end{parts}
+
+\subsection{Theorem 6.12}
+\setcounter{question}{0}
+
+\question{A subset $N$of a topological space $X$ with basis $\mathcal{B}$ is a neighbourhood of a point $x \in X$ if and only if there is a basic open set $B \in \mathcal{B}$ such that $x \in B \subseteq N$.}
+
+\begin{solution}
+ \\$\Rightarrow$: \\
+ If $N$ is a neighhbourhood of $x$, it contains an open set $O_x$ containing $x$. Since $O_x$ is open, it is a union of basic open sets, including at least one that contains $x$. Or else, $x$ will be in $O_x$ but not in the union of basic open sets, leading to a contradiction. Therefore, such a basic open set exists, and it is the required set such that $x \in B_x \subseteq N$ \\
+ $\Leftarrow$: \\
+ A basic open set is an open set. This is true by definition of a neighbourhood.
+ \end{solution}
+
