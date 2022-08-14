@@ -933,3 +933,29 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
  \\Obviously all sets in $\mathcal{B}_x$ are open sets containing $x$. Let $O_x$ be an open set containing $x$. Since it is open, it is a union of sets in $\mathcal{B}$, one of which must contain $x$. Denote that set by $B_x$. $B_x \in \mathcal{B}_x$ since it is an open set containing $x$. Then $B_x$ is a set in the local basis that is also a subset of $O_x$. Hence $\mathcal{B}_x$ is a local basis.
 \end{solution}
  \end{parts}
+ 
+ \subsection{Theorem 6.10}
+ \setcounter{question}{0}
+ 
+ \question{Let $(X, \mathcal{J}_1)$ and $(Y, \mathcal{J}_2)$ be topological spaces, let $\mathcal{B}$ be a basis for the topology $\mathcal{J}_2$ on $Y$, and let $F:X \rightarrow Y$. Then $f$ is continuous on $X$ if and only if for any $B \in \mathcal{B}$, $f^{-1(B)}$ is open in $(X, \mathcal{J}_1)$.}
+ 
+\begin{solution}
+ \\$\Rightarrow$: \\
+ Any $B \in \mathcal{B}$ is open, so if $f$ is continuous, $f^{-1}(B)$ is also continuous by definition. \\
+ $\Leftarrow$: \\
+ Let $O_y$ be an open set in $Y$. Then it is a union of sets in $\mathcal{B}$, ie $O_y = \bigcup_{i \in I} B_i$, where all $B_i \in \mathcal{B}$. Define $A_i = f^{-1}B_i$, which is open by assumption. Observe that $f^{-1}(O_y) = \bigcup_{i \in I} A_i$ which is open. This holds for arbitrary open sets $O_y \in Y$, so $f$ is continuous.
+\end{solution}
+
+\subsection{Exercise 6.11}
+\setcounter{question}{0}
+
+\question{Let $\R^+ \cup \{0\}$ be the set of non-negative real numbers and give it the usual metric topology induced by the absolute value metric.}
+
+\begin{parts}
+ \part{Describe a basis for this topology.}
+ \part{Give an example of a continuous function $f:\R \rightarrow \R^+ \cup \{0\}$ such that there is a basic open set in $\R^+ \cup \{0\}$ whose inverse is not a basic open set in $\R$.}
+ 
+\begin{solution}
+ $\{(a,b)|a,b \in \R^+ \cup \{0\} \text{ and } a < b\}$, $f(x) = x^2$
+\end{solution}
+\end{parts}
