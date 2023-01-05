@@ -921,7 +921,7 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
 \question{}
 
 \begin{parts}
- \part{Let $(X, \mathcal{J})$ be a topological space and, for each point $x \in X$, let $\mathcal{B}_x$ be a local basis at $x$. Show that $\mathcal{B} = \bigcup \{\mathcal{B}_x:x \in X\}$ is a basis for teh topology on $X$.}
+ \part{Let $(X, \mathcal{J})$ be a topological space and, for each point $x \in X$, let $\mathcal{B}_x$ be a local basis at $x$. Show that $\mathcal{B} = \bigcup \{\mathcal{B}_x:x \in X\}$ is a basis for the topology on $X$.}
  
 \begin{solution}
 \\ Let $O$ be an open set. Let $f$ be defined on $O$ such that $f(x)$ maps to an open subset of $O$ containing $x$. This is possible as all points have a local basis. Then $O = \bigcup_{x \in O} f(x)$. All open sets in $\mathcal{J}$ can be written as unions of some sets in $\mathcal{B}$, and all sets in it are obviously open in $\mathcal{J}$. Therefore it is a basis for $\mathcal{J}$.
@@ -963,7 +963,7 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
 \subsection{Theorem 6.12}
 \setcounter{question}{0}
 
-\question{A subset $N$of a topological space $X$ with basis $\mathcal{B}$ is a neighbourhood of a point $x \in X$ if and only if there is a basic open set $B \in \mathcal{B}$ such that $x \in B \subseteq N$.}
+\question{A subset $N$ of a topological space $X$ with basis $\mathcal{B}$ is a neighbourhood of a point $x \in X$ if and only if there is a basic open set $B \in \mathcal{B}$ such that $x \in B \subseteq N$.}
 
 \begin{solution}
  \\$\Rightarrow$: \\
@@ -1004,7 +1004,7 @@ Similar to (a), we have shown that the inverse of $B$ is equal to its closure, i
  Similar to above, $\mathcal{B}*$ is the discrete topology, which is different from the usual topology.
 \end{solution}
 
-\subsection{Theorem 7.3}
+\subsection{Theorem 7.3}\label{thm4.7.3}
 \setcounter{question}{0}
 
 \question{Let $X$ be a set and let $\mathcal{B}$ be a collection of subsets of $X$. Let $\mathcal{B}*$ be the collection of all possible unions of members of $\mathcal{B}$, together with the empty set. Then $\mathcal{B}*$ is a topology on $X$ if and only if}
@@ -1073,3 +1073,55 @@ Obviously,
 $$U = \bigcup_{x\in U} N_x$$
 where $N_x$ is the basic open neighbourhood as described. Then $U$ is open by definition.
 \end{solution}
+
+\subsection{Exercise 7.7}
+\setcounter{question}{0}
+
+\question{Let $d$ be a metric on a set $X$. Then}
+
+\begin{parts}
+\part{the collection of all $r$-balls, $$\mathcal{B} = \{S_r(x):r\in\R, r > 0 \text{ and } x \in X\}$$ is a basis for a topology on $X$, the metric topology induced by $d$.}
+
+\begin{solution}
+Using \hyperref[thm4.7.4]{Theorem 7.4}, let $A$ be an open set under the metric topology. Then by definition, $x\in S_r(x) \subseteq A \forall x$ for some $r\in R$. Every $r$-ball is open, so the opposite also holds. By the theorem, the collection of all $r$-balls is a basis for the metric topology.
+\end{solution}
+
+\part{For a given $x\in X$, the collection of all $r$-balls centered at $x$, $$\mathcal{B}_x = \{S_r(x):r \in \R^+\}$$ is a local basis at $x$ in the metrc topology induced by $d$.}
+
+\begin{solution}
+Let $A$ be an open set containing $x$. By definition, for $A$  to be open, for all points in $A$ such as $x$, $x \in S_r(x) \subseteq A$ for some $r \in \R^+$.
+\end{solution}
+
+\part{The collection $\{S_{\frac{1}{n}}(s): n \in Z^+\}$ is a local basis at $x$ in the metric topology induced by $d$.}
+
+\begin{solution}
+As $\frac{1}{n}$ tends to 0 as $n$ tends to infinity, $\forall r \in \R^+ \exists n \in N: \frac{1}{n} < r$. Then $S_{\frac{1}{n}}(x) \subset S_r(x)$, and the former can be used to substitute the latter in the proof of the part above.
+\end{solution}
+
+\end{parts}
+
+\question{Let $x = [-1,1]$ and let $$\mathcal{B} = \{[-1,b),(a,1]: -1 < a, b < 1\} \cup \{0\}$$ Then $\mathcal{B}$ is a basis for a topology on $[-1,1]$ which is different from any that we have considered previously. In this topology, the singleton set $\{0\}$ is an open set, but no other singleton set is open.}
+
+\begin{solution}
+From \hyperref[thm4.7.3]{Theorem 7.3}, for $\mathcal{B}$ to be a basis,
+$$\bigcup B = X$$
+and for $B_1$ and $B_2$ in $\mathcal{B}$ with any $x \in B_1 \cap B_2 \exists B_3 \in \mathcal{B}: x \in B_3 \subseteq B_1 \cap B_2$. The first is obviously true considering $a = 0, b = 0.5$. The second is true considering $\{0\} \in \mathcal{B}$, and any pair of sets in $\mathcal{B}$ that intersect must intersect at $\{0\}$.
+\end{solution}
+
+\question{Let $\mathcal{J}([0,1])$ denote the collection of all functions from $[0,1]$ into $\R$ such that $\int_0^1 |f(x)|dx$ exists.}
+
+\begin{parts}
+\part{We can make this collection of functions into a topological space in which the points of the space are functions by specifying a basis for the topology. For $f \in \mathcal{J}([0,1])$, let $$\mathcal{B}_f = \{B_r(f): r \in \R^+\}$$ where $$B_r(f) = \left\{g\in \mathcal{J}([0,1]): \int_0^1 |f(x) - g(x)|dx < r\right\}$$ Let $\mathcal{B} = \bigcup_{f \in \mathcal{J}([0,1])} \mathcal{B}_f$. Show that $\mathcal{B}$ is a basis for a topology on $\mathcal{J}([0,1])$.}
+
+\begin{solution}
+We use \hyperref[thm4.7.3]{Theorem 7.3} as above. Note that
+$f \in B_r(f) \forall f \in \mathcal{J}([0,1])$. The first condition $\bigcup \mathcal{B} = \mathcal{J}$ obviously holds. Then for the second condition, for any $x$ in any intersection of basic open sets, $x$ is a function in $\mathcal{J}([0,1])$, so $B_r(x)$ suffices.
+\end{solution}
+
+\part{Show that the "distance function" implicitly defined above, namely $$d(f,g) = \int_0^1 |f(x)-g(x)|dx$$ is not a metric on $\mathcal{J}([0,1])$.}
+
+\begin{solution}
+\textbf{\underline{I probably did something wrong here.}} Obviously, $d(f,g) = d(g,f)$ and $d(f,g) \in \R^+$. Then, $|f(x) - g(x)| + |g(x) - h(x)| \geq |f(x) - h(x)|$ at every $x \in [0,1]$, so the integrals inherit the inequality, i.e. $d(f,g) + d(g,h) \geq d(f,h)$.
+\end{solution}
+
+\end{parts}
